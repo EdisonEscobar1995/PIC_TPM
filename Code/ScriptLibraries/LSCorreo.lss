@@ -1,0 +1,89 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Class Correo
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Class Correo
+	
+	Private ns As NotesSession
+	Private db As NotesDatabase
+	
+	Public Sub New
+		Set ns = New NotesSession
+		Set db = ns.CurrentDatabase
+	End Sub
+	
+	Public Sub notificar(destinatarios As Variant, sAsunto As String, mensaje As Variant, remitente As Variant)
+		On Error Goto label
+		
+		destinatarios = FullTrim(destinatariosValidos(destinatarios))
+		If IsArray(destinatarios) Then 
+			If destinatarios(0) = "" Then 
+				Exit Sub
+			End If
+		ElseIf destinatarios = "" Then 
+			Exit Sub
+		End If
+		
+		Dim ndCorreo As NotesDocument
+		Dim body As NotesMIMEEntity
+		Dim stream As NotesStream
+		Dim sMensaje As String
+		Dim item As NotesItem
+		Dim aux As String
+		
+		ns.ConvertMIME = False 
+		Set stream = ns.CreateStream
+		Set ndCorreo = New NotesDocument(db)
+		
+		ndCorreo.Form = "Memo"
+		Set body = ndCorreo.CreateMIMEEntity
+		ndCorreo.Subject = sAsunto
+		ndCorreo.Principal = remitente
+		ndCorreo.AltFrom = remitente
+		Set item = New NotesItem(ndCorreo, "DisplaySent", remitente, NAMES)
+		Set item = New NotesItem(ndCorreo, "DisplaySent2", remitente, NAMES)
+		Set item = New NotesItem(ndCorreo, "DisplaySent_1", remitente, NAMES)
+		Set item = New NotesItem(ndCorreo, "DisplaySent_1_1", remitente, NAMES)
+		
+		Forall linea In mensaje
+			sMensaje = sMensaje + linea + {<br>}
+		End Forall
+		
+		Call stream.WriteText ({<html><head><title>Notificación</title></head><body style=font-family:arial;font-size:14px>})
+		Call stream.WriteText (sMensaje)
+		Call stream.WriteText ({<br>Favor no responder este correo. Si tiene dudas comuníquese con el administrador por Contáctenos.})
+		Call stream.WriteText ({</body></html>})
+		
+		Call body.SetContentFromText (stream, "text/html;charset=iso-8859-1", ENC_NONE) 
+		Call ndCorreo.Send(False, destinatarios)
+		ns.ConvertMIME = True
+		
+salir:
+		Exit Sub
+label:
+		If IsArray(destinatarios) Then
+			aux = Join(destinatarios, ",")
+		Else
+			aux = destinatarios
+		End If
+		MsgBox "Error enviando correo a " & aux & " (" & CStr(Erl) & ") " & Error$
+		Resume salir
+	End Sub
+	
+	Function destinatariosValidos(destinatarios As Variant) As Variant 
+		If IsEmpty(destinatarios) Then 
+			destinatarios = ""
+		ElseIf IsArray(destinatarios) Then 
+			ForAll x In destinatarios 
+				x = destinatariosValidos(x)	
+			End ForAll
+			destinatarios = FullTrim(destinatarios)
+		End If
+		destinatariosValidos = destinatarios
+	End Function
+	
+End Class

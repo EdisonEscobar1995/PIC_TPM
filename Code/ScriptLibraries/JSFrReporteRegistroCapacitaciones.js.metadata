@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><note xmlns="http://www.lotus.com/dxl" class="filter" maintenanceversion="2.0" replicaid="0525804E00673626" version="12.0">
+<noteinfo noteid="366db6" sequence="128" unid="8C1E2BC3EA270A42052581F60054CED7">
+<created><datetime>20171214T102619,75-05</datetime></created>
+<modified><datetime>20250605T010513,21-05</datetime></modified>
+<revised><datetime>20250604T101928,36-05</datetime></revised>
+<lastaccessed><datetime>20250605T010513,20-05</datetime></lastaccessed>
+<addedtofile><datetime>20221117T010259,36-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name="$TITLE" sign="true"><text>JSFrReporteRegistroCapacitaciones</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+<item name="$POID"><datetime>20250604T101928,36-05</datetime></item></note>

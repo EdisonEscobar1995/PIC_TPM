@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.afterPageLoad>
+		<![CDATA[#{javascript:sessionScope.put("rows", "10");
+viewScope.put("clave", "");}]]></xp:this.afterPageLoad>
+
+	<h3 align="left" class='titulo'>
+		<xp:text escape="true" id="computedField2"
+			value="#{javascript:compositeData.title}">
+		</xp:text>
+	</h3>
+	<xp:panel>
+		<xp:this.rendered><![CDATA[#{javascript: return (view.getPageName()== "/xvBuscar.xsp" || view.getPageName()== "/xvConsultaObsoletos.xsp")}]]></xp:this.rendered>
+		<table>
+			<tr class="trBuscar">
+				<td>
+					<xp:inputText id="inputText1"
+						value="#{viewScope.clave}" styleClass="form-control">
+						<xp:this.attrs>
+							<xp:attr name="placeholder"
+								value="Título">
+							</xp:attr>
+						</xp:this.attrs>
+					</xp:inputText>
+				</td>
+				<td>
+					<div class="input-group-btn">
+						<span class="btn btn-info">
+							<xp:span id="span1"
+								styleClass="icon-search icon-white" style="cursor:pointer">
+								Buscar
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler5">
+								</xp:eventHandler>
+							</xp:span>
+						</span>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+	</xp:panel>
+	<div class="botonesxv">
+		<xp:callback facetName="facet_2" id="callback2"></xp:callback>
+		<xp:button value=" Crear dococumento" id="btnCrear"
+			styleClass="botonVista btn btn-primary btn-small">
+			<xp:this.rendered><![CDATA[#{javascript:return compositeData.newPage && compositeData.create}]]></xp:this.rendered>
+			<i class="icon-file icon-white" />
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete" immediate="false" save="true"
+				id="eventHandler4">
+				<xp:this.action><![CDATA[#{javascript:facesContext.getExternalContext().redirect(compositeData.newPage); }]]></xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+		<xp:button value=" Eliminar" id="btnEliminar"
+			styleClass="botonVista btn btn-danger btn-small"
+			onclick="eliminarDocumentosSel()">
+			<xp:this.rendered><![CDATA[#{javascript:return (view1.getAllEntries().getCount() > 0 && (view.getPageName()== "/xvEquiposMaquinas.xsp" || 
+			view.getPageName()== "/xvMaestroCertificaciones.xsp" ||
+			view.getPageName()== "/xvTipoCertificaciones.xsp" ||
+			view.getPageName()== "/xvClasificacionBeneficios.xsp" ||
+			view.getPageName()== "/xvHabilidades.xsp"))}]]></xp:this.rendered>
+			<i class="icon-trash icon-white" />
+			<xp:eventHandler event="onclick" submit="false"
+				id="eventHandler2">
+				<xp:this.action><![CDATA[#{javascript: eliminarDocumentosSel() }]]></xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+
+		<xp:button value=" Plegar" id="btnPlegar"
+			styleClass="botonVista btn btn-info btn-small">
+			<i class="icon-minus icon-white" />
+			<xp:this.rendered><![CDATA[#{javascript:return view1.getAllEntries().getCount() > 0 && compositeData.categorized}]]></xp:this.rendered>
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete" immediate="false" save="false"
+				id="eventHandler1">
+				<xp:this.action><![CDATA[#{javascript:
+					var viewPanel = getComponent(compositeData.viewPanel); 				
+					var model:com.ibm.xsp.model.domino.DominoViewDataModel = viewPanel.getDataModel(); 
+					var container:com.ibm.xsp.model.domino.DominoViewDataContainer = model.getDominoViewDataContainer();
+					container.collapseAll();
+				}]]></xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+		<xp:button value=" Desplegar" id="btnDesplegar"
+			styleClass="botonVista btn btn-info btn-small">
+			<i class="icon-plus icon-white" />
+			<xp:this.rendered><![CDATA[#{javascript:return view1.getAllEntries().getCount() > 0 && compositeData.categorized}]]></xp:this.rendered>
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete" immediate="false" save="true"
+				id="eventHandler3">
+				<xp:this.action><![CDATA[#{javascript:
+					var viewPanel =	getComponent(compositeData.viewPanel); 
+					var	model:com.ibm.xsp.model.domino.DominoViewDataModel = viewPanel.getDataModel(); 
+					var	container:com.ibm.xsp.model.domino.DominoViewDataContainer = model.getDominoViewDataContainer();
+					container.expandAll();
+				}]]></xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+	</div>
+	<xp:panel>
+		<xp:this.rendered><![CDATA[#{javascript:return view1.getAllEntries().getCount() == 0}]]></xp:this.rendered>
+		<h5>No se han creado documentos</h5>
+	</xp:panel>
+	<xp:panel id="viewContainer">
+		<xp:this.rendered><![CDATA[#{javascript: view1.getAllEntries().getCount() > 0}]]></xp:this.rendered>
+
+		<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+
+		<div class="row" style="margin:0">
+			<div class="span6">
+				<xp:pager id="pager1" styleClass="pager"
+					rendered="#{javascript:compositeData.pager}" partialRefresh="true">
+					<xp:this.for><![CDATA[#{javascript:compositeData.viewPanel}]]></xp:this.for>
+					<xp:pagerControl id="pagerControl1" type="Previous"
+						value="Anterior">
+					</xp:pagerControl>
+					<xp:pagerControl id="pagerControl2" type="Group">
+					</xp:pagerControl>
+					<xp:pagerControl id="pagerControl3" type="Next"
+						value="Siguiente">
+					</xp:pagerControl>
+				</xp:pager>
+			</div>
+			<div class="span6">
+				<xp:panel styleClass="pager">
+					<xp:this.rendered><![CDATA[#{javascript: compositeData.pager}]]></xp:this.rendered>
+					<span>Mostrar</span>
+					<xp:repeat id="repeat1" indexVar="index"
+						style="display:inline">
+						<xp:this.value><![CDATA[#{javascript:return ["10", "20", "50", "100"]}]]></xp:this.value>
+						<span>
+							<xp:link escape="true" id="link1">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.rows != getComponent("repeat1").getValue()[index]}]]></xp:this.rendered>
+								<xp:this.text><![CDATA[#{javascript:getComponent("repeat1").getValue()[index]}]]></xp:this.text>
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial"
+									refreshId="viewContainer">
+									<xp:this.action><![CDATA[#{javascript:sessionScope.rows = getComponent("repeat1").getValue()[index]}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:text escape="true"
+								id="computedField1">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.rows == getComponent("repeat1").getValue()[index]}]]></xp:this.rendered>
+								<xp:this.value><![CDATA[#{javascript:getComponent("repeat1").getValue()[index]}]]></xp:this.value>
+							</xp:text>
+						</span>
+					</xp:repeat>
+					<span>filas por página</span>
+				</xp:panel>
+			</div>
+		</div>
+	</xp:panel>
+</xp:view>

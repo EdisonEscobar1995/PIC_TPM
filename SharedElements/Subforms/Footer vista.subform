@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='96a' unid='6C0B84CF150D926305257D620048840B' sequence='41'>
+<created><datetime>20140929T081203,95-05</datetime></created>
+<modified><datetime>20250605T010512,34-05</datetime></modified>
+<revised><datetime>20250604T101927,47-05</datetime></revised>
+<lastaccessed><datetime>20250605T010512,33-05</datetime></lastaccessed>
+<addedtofile><datetime>20161016T134732,59-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>Footer vista</text><text>sfrFooterVista</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sfrFooterVista</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEAzP8IAAAAAACF/xYAAQAACjxz
+Y3JpcHQgc3JjPSIv3QYAAK3/qf8iAAEAGAAEABYAFgAAABQABQAJAHdlYkRiTmFtZQADAIX/CAAB
+AAAKqgLeBgAArgCF/y0AAQAACi9KU0ZyVmlld1RlbXBsYXRlP09wZW4mdj0zIj48L3NjcmlwdD4A
+zf8IAAAAAACBAoL/WgACAAAAAAAAAAAAoAUAAKAFDwCkBsAH2wj3CRILLgxJDWUOgA+bELcR0hLu
+EwkVJRYAAAAAAAAAAAAAAAEAAAAAlIcAAAAAAAAAAAAAAAABAAAABAAAAIMEAgCF/wgAAQAACt0G
+AACt/6n/QAADABgAAQAyADIAAAAmAAEABgBEb21pbm8BABAAVmlld1ByZXZpb3VzUGFnZbkCAwAH
+AAoAAwAJNFMAAACr/xgAAABAC40BAQABAAAKQW50ZXJpb3JyCAkA7OnYAGIOAQCCAAAAAAAAAAAA
+ev8yAAAAAAAMAAAAAAALAAAAAAAAAAAAAABkaXNwbGF5Om5vbmVidG5QcmV2aW91cwCqAt4GAACu
+AIX/CAABAAAK3QYAAK3/qf88AAMAGAABAC4ALgAAACIAAQAGAERvbWlubwEADABWaWV3TmV4dFBh
+Z2W5AgMABwAKAAMACTRTAAAAq/8ZAAAAQAuNAQEAAQAAClNpZ3VpZW50ZQByCAkA7OnYAGIOAQCC
+AAAAAAAAAAAAev8uAAAAAAAMAAAAAAAHAAAAAAAAAAAAAABkaXNwbGF5Om5vbmVidG5OZXh0AKoC
+3gYAAK4Ahf8IAAEAAArdBgAArf+p/y4AAwAYAAEAIAAgAAAAEgACAIoTAAAAAAAA7QEDAAcADAAF
+AAkwUzBFAAAAq/8ZAAAAQAuNAQEAAQAACkRlc3BsZWdhcgByCAkA7OnYAGIOAQCCAAAAAAAAAAAA
+ev8wAAAAAAAMAAAAAAAJAAAAAAAAAAAAAABkaXNwbGF5Om5vbmVidG5FeHBhbmQAqgLeBgAArgCF
+/wgAAQAACt0GAACt/6n/LgADABgAAQAgACAAAAASAAIAiRMAAAAAAADtAQMABwAMAAUACTBTMEUA
+AACr/xYAAABAC40BAQABAAAKUGxlZ2FycggJAOzp2ABiDgEAggAAAAAAAAAAAHr/MgAAAAAADAAA
+AAAACwAAAAAAAAAAAAAAZGlzcGxheTpub25lYnRuQ29sbGFwc2UAqgLeBgAArgDM/wgAAAAAAIX/
+CAABAAAKzf8IAAAAAAA=
+</rawitemdata></item></note>
+

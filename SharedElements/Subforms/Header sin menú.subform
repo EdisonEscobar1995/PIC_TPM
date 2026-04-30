@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='20e' unid='47283D9D583BE08805257B8D0050116A' sequence='42'>
+<created><datetime>20130617T093433,38-05</datetime></created>
+<modified><datetime>20250605T010512,52-05</datetime></modified>
+<revised><datetime>20250604T101927,65-05</datetime></revised>
+<lastaccessed><datetime>20250605T010512,51-05</datetime></lastaccessed>
+<addedtofile><datetime>20161016T134728,07-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador DEV/O=DEV</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador DEV/O=DEV</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Administrador DEV/O=DEV</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Administrador DEV/O=DEV</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>Header sin menú</text><text>sfrHeaderSinMenu</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$SubForms'><text>Header | sfrHeader</text></item>
+<item name='$SubForm_RepIDs' sign='true'><text>0000000000000000</text></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='Administrador' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='unique' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>unique</text><text>administrador</text></textlist></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sfrHeaderSinMenu</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAzP8IAAAAAACF/1UAAQAACjxk
+aXYgaWQ9ImdlbmVyYWwiIGNsYXNzPSJwYWdlLWNvbnRhaW5lciIgc3R5bGU9ImRpc3BsYXk6bm9u
+ZSIgYWxpZ249ImNlbnRlciI+AM3/CAAAAAAAgQKC/1oAAgAAAAAAAAAAAKAFAACgBQgA0AKgBXAI
+QAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAA
+AAYAAACDBAIAhf8IAAEAAArdBgAArf9x/ysAAAAAAAMAGAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+c2ZySGVhZGVyAK3/HwAOAAgAAAATAEhlYWRlciB8IHNmckhlYWRlcgAArgLeBgAArgCF/wgAAQAA
+CoECgv9aAAMAAAAAAAAAAACgBQAAoAUIANACoAVwCEALEA7gELATgBYAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAQAAAACUhKAFCgCgBQoAAABkAAEAAAAEAAAAgwQDAMz/CAAAAAAAhf8xAAEAAAo8
+ZGl2IGNsYXNzPSJjb250YWluZXIiIHN0eWxlPSJ3aWR0aDo5NSUiPgDN/wgAAAAAAA==
+</rawitemdata></item></note>
+

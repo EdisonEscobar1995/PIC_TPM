@@ -1,0 +1,263 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+Use "LSComunes"
+Use "LSCorreo"
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Class Flujo
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+
+Class Flujo
+	
+	Private ns As NotesSession
+	Private db As NotesDatabase
+	Private vwUniques As NotesView
+	Private vwHistoria As NotesView
+	Private ndHistoria As NotesDocument  
+	Private ndPrincipal As NotesDocument
+	Private ndEstadoDestino As NotesDocument
+	Private ndCfg As NotesDocument
+	Private codFlujo As String
+	Private codEstadoOrigen As String
+	Private nomEstadoOrigen As String
+	Private codEstadoDestino As String
+	Private nomEstadoDestino As String
+	Private usuario As Variant
+	Private responsableOrigen As Variant
+	Private responsableDestino As Variant
+	Private otrosDestinatarios As Variant 
+	Private comentario As Variant
+	Private evento As String
+	Private objCorreo As Correo
+	Private objComunes As Comunes
+	Private sWebDbName As Variant
+
+	
+	Public Sub new(ndPrincipal As NotesDocument)
+		Dim vwCfg As NotesView
+		sWebDbName = Evaluate("@WebDBName")
+		Set ns = New NotesSession
+		Set db = ns.CurrentDatabase
+		Set Me.ndPrincipal = ndPrincipal
+		Set vwCfg = db.GetView("vwProgTodos")
+		Set ndCfg = vwCfg.GetDocumentByKey("frGeneral", True)
+		Set vwUniques = db.GetView("vwProgUniques")
+		Set ndEstadoDestino = vwUniques.GetDocumentByKey(ndPrincipal.estadoDestino(0), True)
+		Set vwHistoria = db.Getview("vwHistorico")
+		Set objComunes = New Comunes
+		
+		codFlujo = ndPrincipal.uniqueFlujo(0)	
+		codEstadoOrigen = ndPrincipal.uniqueEstado(0)
+		nomEstadoOrigen = ndPrincipal.estado(0)
+		codEstadoDestino = ndPrincipal.estadoDestino(0)
+		nomEstadoDestino = ndEstadoDestino.nombre(0)
+		usuario = ndPrincipal.usuario
+		responsableOrigen = ndPrincipal.responsable
+		responsableDestino = ndPrincipal.responsableDestino
+		otrosDestinatarios = ndPrincipal.destinatarios	
+		comentario = ndPrincipal.comentario	
+		evento = ndPrincipal.evento(0)
+		
+		ndPrincipal.estadoDestino = ""
+		ndPrincipal.responsableDestino = ""
+		ndPrincipal.destinatarios = ""
+		ndPrincipal.comentario = ""
+		ndPrincipal.evento = ""
+		Call ndPrincipal.Removeitem("usuario")
+		
+		ndPrincipal.fechaEstado = now
+		
+		Set objCorreo = New Correo
+	End Sub
+	
+	Public Function cambiarEstado As String
+		On Error GoTo label
+		Dim respuesta As String
+		
+		ndPrincipal.posEstado = ndEstadoDestino.ubicacion
+		ndPrincipal.estado = nomEstadoDestino
+		ndPrincipal.uniqueEstado = codEstadoDestino
+		ndPrincipal.responsable = responsableDestino
+		If ndEstadoDestino.modAsigEdi(0) = "C" Then
+			ndPrincipal.editores = objComunes.getPersonasFlujo(ndPrincipal, ndEstadoDestino.ediCampo(0))
+		ElseIf ndEstadoDestino.modAsigEdi(0) = "G" Then
+			ndPrincipal.editores = objComunes.getResponsablesGrupo(ndEstadoDestino.ediGrupo)
+		else
+			ndPrincipal.editores = ndEstadoDestino.ediNombre
+		End If
+		If ndEstadoDestino.fechaPublicacion(0) = "Si" Then 
+			ndPrincipal.fechaPublicacion = Now
+		Else
+			Call ndPrincipal.Removeitem("fechaPublicacion")
+		End If
+		
+salir:
+		cambiarEstado = respuesta
+		Exit Function
+label:
+		respuesta = "Error al cambiar el estado. " & " (" & CStr(Erl) & ") " & Error$
+		MsgBox "Error en cambiarEstado. " & " (" & CStr(Erl) & ") " & Error$
+		Resume salir
+	End Function
+
+	Public Sub registrarHistorico
+		Dim ndHistorico As NotesDocument	
+		Dim item As NotesItem
+		Set ndHistorico = New NotesDocument(db)
+		
+		ndHistorico.form = "frHistorico"	
+		ndHistorico.uniquePadre = ndPrincipal.unique
+		ndHistorico.fecha = Now
+		Select Case evento
+			Case "CE"
+				ndHistorico.accion = "Cambia de " + nomEstadoOrigen + " a " + nomEstadoDestino
+			Case "CR"
+				ndHistorico.accion = "Cambia de responsable"
+		End Select
+		ndHistorico.uniqueEstadoOrigen = codEstadoOrigen
+		ndHistorico.uniqueEstadoDestino = codEstadoDestino
+		ndHistorico.comentario = comentario
+		Set item = New NotesItem(ndHistorico, "autor", usuario, NAMES)	
+		Set item = New NotesItem(ndHistorico, "responsableOrigen", responsableOrigen, NAMES)	
+		Set item = New NotesItem(ndHistorico, "responsableDestino", responsableDestino, NAMES)	
+		Set item = New NotesItem(ndHistorico, "editor", "*", AUTHORS)		
+		
+		Call ndHistorico.Save(True, False)
+	End Sub
+	
+	Public Sub notificar
+		Dim vwTransiciones As NotesView
+		Dim ndTransicion As NotesDocument
+		Dim claves(0 To 2) As String
+		Set vwTransiciones = db.GetView("vwProgTransiciones")
+		
+		claves(0) = codFlujo
+		claves(1) = codEstadoOrigen
+		claves(2) = codEstadoDestino
+
+		Set ndTransicion = vwTransiciones.GetDocumentByKey(claves, True)
+		If Not ndTransicion Is Nothing Then
+			ForAll notificacion In ndTransicion.notificaciones
+				Call enviarNotificacion(notificacion)
+			End ForAll
+		End If
+	End Sub
+	
+	Public Sub ejecutarAcciones
+		Dim vwUniques As NotesView
+		Dim vwTransiciones As NotesView
+		Dim ndTransicion As NotesDocument
+		Dim claves(2) As String
+		Dim posicion As Variant
+		
+		Set vwTransiciones = db.GetView("vwProgTransiciones")
+		
+		claves(0) = codFlujo
+		claves(1) = codEstadoOrigen
+		claves(2) = codEstadoDestino
+		
+		If ndPrincipal.admonFlujo(0) = "S" Then
+			Set ndTransicion = ndPrincipal
+		Else
+			Set ndTransicion = vwTransiciones.GetDocumentByKey(claves, True)
+		End If
+		
+		If Not ndTransicion Is Nothing Then
+			ForAll notificacion In ndTransicion.notificaciones
+				Call enviarNotificacion(notificacion)
+			End ForAll
+			
+			If ndTransicion.acciones(0) <> "" Then 
+				ForAll accion In ndTransicion.acciones
+					If accion = "CON" Then 
+						If ndPrincipal.consecutivo(0) = "" Then							
+							ndPrincipal.consecutivo = objComunes.generarConsecutivo(ndPrincipal.sede(0), ndPrincipal.form(0), ndPrincipal)
+						End If 
+					End If
+				End ForAll
+			End If
+		End If
+		
+		ndPrincipal.notificaciones = ""
+		ndPrincipal.acciones = ""
+		ndPrincipal.admonFlujo = ""
+	End Sub
+	
+	Private Sub enviarNotificacion(unique As String)
+		Dim ndNotificacion As NotesDocument
+		Dim destinatarios As Variant
+		Dim i As Integer
+		Dim enlace(0) As String
+		Dim mensaje As Variant
+		Dim nota(1) As String
+		
+		Set ndNotificacion = vwUniques.GetDocumentByKey(unique, True)
+		If Not ndNotificacion Is Nothing Then
+			If ndNotificacion.modAsigDes(0) = "C" Then
+				destinatarios = objComunes.getPersonasFlujo(ndPrincipal, ndNotificacion.desCampo(0))
+				For i = 1 To Ubound(ndNotificacion.desCampo)
+					destinatarios = Arrayappend(destinatarios, objComunes.getPersonasFlujo(ndPrincipal, ndNotificacion.desCampo(i)))
+				Next
+			ElseIf ndNotificacion.modAsigDes(0) = "G" Then
+				destinatarios = objComunes.getResponsablesGrupo(ndNotificacion.desGrupo)	
+			Else
+				destinatarios = ndNotificacion.desNombre
+			End If
+			
+			destinatarios = ArrayAppend(destinatarios, otrosDestinatarios)
+			destinatarios = FullTrim(ArrayUnique(destinatarios))
+			
+			If ndNotificacion.enlace(0) = "Si" Then
+				enlace(0) = {<a href='}+ndCfg.host(0)+"/"+sWebDbName(0)+{/0/}+ndPrincipal.UniversalID+{?OpenDocument' target='_blank'>Ver documento</a>}
+				mensaje = Arrayappend(ndNotificacion.mensaje, enlace)
+			Else
+				mensaje = ndNotificacion.mensaje
+			End If
+			
+			Call objCorreo.notificar(destinatarios, ndNotificacion.asunto(0), getComentario(mensaje), ndCfg.remitenteCorreos(0))
+		End If
+	End Sub
+	
+	Sub cambiarResponsable
+		Dim mensaje As Variant 
+		Dim ndAux As NotesDocument
+		Dim item As NotesItem
+		Set ndAux = New NotesDocument(db)
+		Set item = New NotesItem(ndAux, "mensaje", "")
+		
+		ndPrincipal.editores = FullTrim(ArrayUnique(ArrayReplace(ndPrincipal.editores, ndPrincipal.responsable, responsableDestino)))
+		ndPrincipal.responsable = responsableDestino
+		
+		Call item.appendToTextList("Usted ha sido asignado para gestionar el siguiente documento:")
+		Call item.appendToTextList({<a href='}+ndCfg.host(0)+"/"+sWebDbName(0)+{/0/}+ndPrincipal.UniversalID+{?OpenDocument' target='_blank'>Ver documento</a>})
+		
+		mensaje = ndAux.mensaje
+		
+		Call objCorreo.notificar(ndPrincipal.responsable, "Cambio de responsable", getComentario(mensaje), ndCfg.remitenteCorreos(0))
+	End Sub
+	
+	Sub actualizarEditores
+		If ndPrincipal.form(0) = "frPEQ" And ndPrincipal.posEstado(0) <> "F" Then
+			ndPrincipal.editores = FullTrim(ArrayUnique(ArrayAppend(ndPrincipal.editores, ndPrincipal.responsables)))
+		End If
+	End Sub
+	
+	Function getComentario(mensaje As Variant) As Variant
+		Dim nombre As NotesName
+		Dim subtitulo(0) As String 
+		If comentario(0) <> "" Then
+			Set nombre = New NotesName(usuario(0))
+			subtitulo(0) = "<br>Comentario ingresado por " + nombre.common + ":"
+			mensaje = ArrayAppend(mensaje, subtitulo)
+			mensaje = ArrayAppend(mensaje, comentario)
+		End If	
+		getComentario = mensaje
+	End Function
+	
+
+	
+	
+End Class

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='45e' unid='0E8A7295835571DB05257BB30069C9A2' sequence='51'>
+<created><datetime>20130725T141528,98-05</datetime></created>
+<modified><datetime>20250605T010514,64-05</datetime></modified>
+<revised><datetime>20250604T101929,85-05</datetime></revised>
+<lastaccessed><datetime>20250605T010514,63-05</datetime></lastaccessed>
+<addedtofile><datetime>20161016T134729,53-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador DEV/O=DEV</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador DEV/O=DEV</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Administrador DEV/O=DEV</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Administrador DEV/O=DEV</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>Vista por defecto</text><text>$$ViewTemplateDefault</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>C</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>$$ViewTemplateDefault</text></item>
+<item name='Form' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='keyForm' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>keyForm</text><text>form</text></textlist></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBREA0AKgBaQGwAfbCPcJEgsuDEkNZQ6AD5sQtxHSEu4TCRUl
+FgAAAAAAAAABAAAAAJSEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEAzP8IAAAAAACF/wgAAQAACt0G
+AACt/63/KAAOABgAAAAcABwAAAAaAAEAEABzZnJIZWFkZXJDb25NZW51AwCuAt4GAACuAIX/CAAB
+AAAKgQKC/1oAAgAAAAAAAAAAAKAFAACgBQYA0AKgBaQGwAfbCPcJAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAABAAAAAJSEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAIAhf8IAAEAAArN/wgAAAAA
+AIECgv9aAAMAAAAAAAAAAACgBQAAoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAgQAAAACVhwAAAAAAAAAAAAAAAAEAAAAGAAAAgwQDAN0GAACF/4X/CAABAAIK0ggB
+AP8AAADeBgAAhf/dBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/PgCCAAAFADACAAAAAAAA
+AgEAAgoWAAAAAAAAAAQAAAAAABYAAAAUAAEACgBmdndEZWZhdWx0AwBmb3JtYg4BAIQAAAAAAAAA
+AADeBgAAiv/dBgAAhf+F/wgAAQACCtIIAQD/AAAA3gYAAIX/3QYAAIr//v9QAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACK/6ICggAABQAwAgAAAAAAAAIBAAIKdgIAAAAAAAAHAAAAAAB2AgoABAABAGQAAwBw
+ZXEAAQAAAAEABwBOb0NhY2hlAB8CAQAAAAEADQB2d1Byb2dVbmlxdWVzAAEAEgByZXN0cmljdHRv
+Y2F0ZWdvcnn7ATQBAQAGAG5vbWJyZQIADAEAAAAAAACDBgMABwAMAAUACTFTMlMAAAC8AQUABQB2
+aXN0YQABABAAdndBc29jaWFkb3NDQVBETwoCrwCUASYAAQASAENBUERPIGFzb2NpYWRvcyBhIAUA
+AwBwZXEAIgKuAG4BBQAFAHZpc3RhAAEADgB2d0Fzb2NpYWRvc0hBTgoCrwBMAToAAQAlAEhlcnJh
+bWllbnRhcyBkZSBhbqBsaXNpcyBhc29jaWFkYXMgYSAABQADAHBlcQAiAq4AEgEFAAUAdmlzdGEA
+AQAOAHZ3QXNvY2lhZG9zSU1QCgKvAPAALgABABoASW5mb3JtYWNpom4gTVAgYXNvY2lhZGEgYSAF
+AAMAcGVxACICrgDCAAUABQB2aXN0YQABAA4AdndBc29jaWFkb3NMVVAKAq8AoAA2AAEAIgBMZWNj
+aW9uZXMgZGUgdW4gcHVudG8gYXNvY2lhZGFzIGEgBQADAHBlcQAiAq4AagAFAAUAdmlzdGEAAQAO
+AHZ3QXNvY2lhZG9zUE1FCgKvAEgAMgABAB0AUGVxdWWkYXMgbWVqb3JhcyBhc29jaWFkYXMgYSAA
+BQADAHBlcQAiAq4AFgCdAAAAAAAAAAAA8D9rAq4ABAC1CwMABwBEAD4ACTBSMlI2UzdTOFMxMFIx
+NFMxNVMxNlMxOFIyMlMyM1MyNFMyNlIzMFMzMVMzMlMzNFIzOFMzOVM0MFM0MlJrZXlGb3JtAGIO
+AQCEAAAAAAAAAAAA3gYAAIr/3QYAAIX/hf8IAAEAAgrSCAEA/wAAAN4GAACF/90GAACK//7/UAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAiv8+AIABAAUAMAIAAAAAAAACAQACCg4AAAAAAAAACwAAAAAADgAA
+AAwAAQABADAAAwBTYXZlT3B0aW9ucwBiDgEAhAAAAAAAAAAAAN4GAACK/4X/CAABAAAK3QYAAIr/
+/v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAB4AAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/3AAgAEABQAwAgAAAAAAAAIBAAIKRgAAAAAAAAAFAAAA
+AABGAAAAOACdAGoBAAAAAAAAAADwPw8CrwAgABYAnQAAAAAAAAAAAPA/EAFrAq4ACgCdAK4ABAC1
+AwMABwAMAAUACTBTMEUAdmlzdGEAYg4BAIQAAAAAAAAAAADeBgAAiv/dBgAAhf+F/wgAAQACCtII
+AQD/AAAA3gYAAIX/gQKC/1oABAAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAQAzP8IAAAA
+AACF/wgAAQAACoECgwQBAIX/CAABAAAK3QYAAK3/rf8oAA4AGAAAABwAHAAAABoAAQAPAHNmckJv
+dG9uZXNWaXN0YQADAK4C3gYAAK4Ahf8IAAEAAAqBAoMEBACF/wgAAQAACoECgwQEAIX/FgABAAAK
+PGRpdiBpZD12aXN0YT7N/wgAAAAAAIX/CQABAAAKIADdBgAArf9x/ywAAAAAAAMAAgAKAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAdndMdWdhcmVzAK3/IgATABgAAAAWABYAAAAUAAUACgAkJFZpZXdOYW1l
+AwDq/z4AEwAIRAAAsBNACwEAAAoAAAAAAAAAAAEAAAoBAAAKAAAFAP///wABAAAAAAAAAAAAAAAA
+AAAAAAAAAO3/IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAArgLeBgAArgCF/wkAAQAACiAA
+zP8IAAAAAACF/w4AAQAACjwvZGl2Ps3/CAAAAAAAgQKDBAQAhf8IAAEAAAqBAoMEAQDM/wgAAAAA
+AIX/CAABAAAK3QYAAK3/rf8iAA4AGAAAABYAFgAAABQAAQAJAHNmckZvb3RlcgADAK4C3gYAAK4A
+hf8IAAEAAAqBAoMEBACF/wgAAQAACoECgwQBAIX/CAABAAAK3QYAAK3/rf8mAA4AGAAAABoAGgAA
+ABgAAQAOAHNmckZvb3RlclZpc3RhAwCuAt4GAACuAIX/CAABAAAKgQKDBAEAhf8IAAEAAArN/wgA
+AAAAAA==
+</rawitemdata></item></note>
+

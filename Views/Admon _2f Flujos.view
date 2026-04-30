@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='5be' unid='CA60CA76C51E6C8C05257C0B00795C03' sequence='38'>
+<created><datetime>20131021T170534,11-05</datetime></created>
+<modified><datetime>20250605T010506,06-05</datetime></modified>
+<revised><datetime>20250604T101920,76-05</datetime></revised>
+<lastaccessed><datetime>20260423T142653,09-05</datetime></lastaccessed>
+<addedtofile><datetime>20161016T134730,41-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+pAACABgABgBub21icmUFAAYAbm9tYnJlAwAFADIALQAEAAYADgAJAAQAbm9tYnJlbm9tRm9ybXVs
+YXJpb3MkQ29uZmxpY3QkUkVGAAQABAAAAEAABQAEAEZvcm0BAA0AQWRtb24gLyBGbHVqbwAKAgQA
+BQAEAEZvcm0BAAcAZnJGbHVqbwAKAgQAHQIEAAMABwAUAA4ACTNTNFM2UzdTOVMxMFM=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+KAACAABEAGYAAAAGAABmAAYADgBub21icmVub21Gb3JtdWxhcmlvcw==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAAEACAAAAFZDgQAGAAYAGgAAAHgABQAAB4AAAAAAAAAAAAICAAAAVkOBAA4AHAAAAAAA0AAG
+AAAHgAAAAAAAAAAAAgIAAEBub21icmVOb21icmUaAAIAGAAGAG5vbWJyZQUABgBub21icmUDAG5v
+bUZvcm11bGFyaW9zRm9ybXVsYXJpb3MgYSBsb3MgcXVlIGFwbGljYSYAAQAAAAEBAAkBAAAKAQEO
+CgAAAQCtKwEAAQABAAAAAAAAAAAAV0MHAQAHAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA//8AAAAA
+AAAAAAAAAAAAAFdDCAEABwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAP//AAAAAAAAAAAAAAAAAABC
+AAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAA
+AQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Fonts'><textlist><text>5</text><text>38</text><text>Verdana</text><text
+>6</text><text>38</text><text>Verdana</text><text>7</text><text>38</text><text
+>Verdana</text><text>8</text><text>38</text><text>Verdana</text></textlist></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$SelQuery' sign='true'>
+<rawitemdata type='f'>
+gQYAAAAAif8hAAAAAAABABUAQWRtb24gLyBGbHVqb3xmckZsdWpvAA==
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><text>Admon / Flujos|vwFlujos</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item></note>
+

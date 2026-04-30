@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='301622' unid='06EF6FC5CA7933D905258577005708E5' sequence='31'>
+<created><datetime>20200529T105039,09-05</datetime></created>
+<modified><datetime>20250605T010506,12-05</datetime></modified>
+<revised><datetime>20250604T101920,82-05</datetime></revised>
+<lastaccessed><datetime>20260422T075654,81-05</datetime></lastaccessed>
+<addedtofile><datetime>20200924T094357,96-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$FormatNote' summary='true' sign='true'>
+<rawitemdata type='4'>
+AQD2eeaF9Ynx06K9CABRdiUF
+</rawitemdata></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>Admon / Habilidades|vwHabilidades</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+rAAFAEoARQAFABAAFAAGAAkABABub21DZXJ0aWZpY2FjaW9ubm9tVGlwb0NlcnRpZmljYWNpb25u
+b21icmUkQ29uZmxpY3QkUkVGAAQABAAAAEgABQAEAEZvcm0BABEAQWRtb24gLyBIYWJpbGlkYWQA
+CgIEAAUABABGb3JtAQALAGZySGFiaWxpZGFkAAoCBAAdAgQAAwAHABQADgAJM1M0UzZTN1M5UzEw
+Uw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+RQADAABECGYHAAAQAAhmBxAAFAAAZgAkAAYAbm9tQ2VydGlmaWNhY2lvbm5vbVRpcG9DZXJ0aWZp
+Y2FjaW9ubm9tYnJl
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAcACQAAAFZDAwAQAA0AAAAAALQABQAAB4ABAAAAAAAAAAICAAAAVkMDABQAEgAAAAAAtAAG
+AAAHgAEAAAAAAAAAAgIAAABWQwEABgAJAAAAAAC0AAcAAAeAAAAAAAAAAAACAgAAAG5vbUNlcnRp
+ZmljYWNpb25DZXJ0aWZpY2FjaW9ubm9tVGlwb0NlcnRpZmljYWNpb25UaXBvIGNlcnRpZmljYWNp
+b25ub21icmVIYWJpbGlkYWQmAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdD
+CAEABwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwkBAAcAAAAAAAAA
+AAAAAAAAAAAAAQAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MKAQAHAAAAAAAAAAAAAAAAAAAAAAEA
+AAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAEAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD/
+//8AAQD///8AAAABAAAAAAABAAAAAAABAAAAAAAAAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Verdana</text><text>6</text><text>38</text><text>Verdana</text><text>7</text><text
+>38</text><text>Verdana</text><text>8</text><text>38</text><text>Verdana</text><text
+>9</text><text>38</text><text>Verdana</text><text>10</text><text>38</text><text
+>Verdana</text></textlist></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$ViewScript' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:66
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Querypaste(Source As Notesuiview, Continue As Variant)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:BindEvents:1:129
+Private Sub BindEvents(Byval Objectname_ As String)
+	Static Source As NOTESUIVIEW
+	Set Source = Bind(Objectname_)
+	On Event Querypaste From Source Call Querypaste
+End Sub
+
+'++LotusScript Development Environment:2:2:Querypaste:1:12
+Sub Querypaste(Source As Notesuiview, Continue As Variant)
+	Continue = False
+End Sub<break/></text></item>
+<item name='$SelQuery' sign='true'>
+<rawitemdata type='f'>
+gQYAAAAAif8pAAAAAAABAB0AQWRtb24gLyBIYWJpbGlkYWR8ZnJIYWJpbGlkYWQA
+</rawitemdata></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwRAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABAOzp2AABAAAAAAAJAAAAAAABAOzp2AAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$ViewScript_O' sign='true'>
+<rawitemdata type='14'>
+AQAAAkxTT0IDABQIZW4AAAQACQAtAAQAAAAoAkABAAAAAAAArAC4AAAAAAAAALwAIABAAP//2ABc
+AAAAAAAAAAIAAAAEAFgBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgB
+WAEAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAEAAAC4ALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuAC4AAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
+AAAEAAAALQAAAAAAAAAoAgAAQAEAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAA
+AAUAAABXMzJJJQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAwBEAQAAAAAsAA0AJABWAEkARQBXAFMAQwBSAEkAUABUAF8ATwAAAHQAAwBOAEUAVwAAAIgA
+BgBEAEUATABFAFQARQAAAAAApAAKAEkATgBJAFQASQBBAEwASQBaAEUAAAAAAPQACQBUAEUAUgBN
+AEkATgBBAFQARQAAABABBgBPAEIASgBFAEMAVAAAAAAAkAAAAAAAAAD//wYAUwBPAFUAUgBDAEUA
+AAAAAP//CABDAE8ATgBUAEkATgBVAEUAAAAAACQBCgBCAEkATgBEAEUAVgBFAE4AVABTAAAAAAD/
+/wsATwBCAEoARQBDAFQATgBBAE0ARQBfAAAA//8LAE4ATwBUAEUAUwBVAEkAVgBJAEUAVwAAAP//
+BgAlAEwAUwBYAFUASQAAAAAA//8KAFEAVQBFAFIAWQBQAEEAUwBUAEUAAAAAAAUALAIAAAAAXLWD
+7wgAAABYAQAAwAAAAAAAAAACAAAAnABIAQAAAAAAAAAAAAAAAAAAAACcAJwAAAAAAAAAAAAAAAAA
+AAAAAAAAAABIAUgBAAAAAAAAAAABAAAAAgAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwABAEgBAADcAAYIAAAAABoA
+AAAUAf//AAAAABAAAAAAAAAA+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGFRMp7S5pEL9dAN0BEYa3AAAAAAAAAAAAAAAA
+AAAAAGQAAAAAAAAAAAAAAAAAAAACAKwAAAAQAgAAAAAKAAEA//8AAAMAIAAAAAAAlAAJAgAAuAAI
+AAAAAAAAACgBAAAAAAAAAgAAAPABAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAgAA
+AAAAAAAA8AHwAQAAAAAAAAAAAgAAAAIAAAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAQAAAgAAlAAJAgAAuAADAAEA
+AAAAAKgAAAABAAAAEwAAACgBAADaAAAAAQAAAAEAAAAAAAAABAAxAAAAAAAdAAAaCwBbSAFJnADK
+uACmGgwAR0gBy9oAAABYARoNAB0aEQBdAAKDpRoSAB0CAAAAEQAYAAAAAAD//wEAAwADAAAABgDA
+AAgAKAEPAAoAAADV
+</rawitemdata></item></note>
+

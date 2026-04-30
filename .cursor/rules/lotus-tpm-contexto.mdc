@@ -1,0 +1,53 @@
+---
+description: Contexto del proyecto LOTUS — aplicación Domino XPages TPM/PIC (estructura, stack y convenciones).
+alwaysApply: true
+---
+
+# LOTUS — Contexto del proyecto (Domino / XPages)
+
+## Qué es este repositorio
+
+- Es un **diseño de base HCL Domino (Notes/Domino)** exportado “on disk” desde **Domino Designer**, no una app Node/React típica.
+- El `plugin.xml` identifica el plugin de diseño como **`PIC_TPM`** (plantilla TPM).
+- La aplicación en servidor corresponde a un **.nsf** (en metadatos aparece el título tipo **PIC / TPM** y rutas de plantilla tipo `Plantilla_TPM.ntf`). El código aquí es el **diseño** (formularios, vistas, XPages, bibliotecas).
+
+## Stack tecnológico
+
+| Capa | Tecnología |
+|------|------------|
+| Servidor y datos | HCL Domino, NSF, vistas Notes, ACL y roles (p. ej. `[Administrador]`) |
+| UI web | **XPages** (JSF para Domino), namespaces `xp:` y controles personalizados `xc:` |
+| Lógica servidor (XPages) | **JavaScript server-side** en bibliotecas `.jss` (p. ej. `ssCommon`) |
+| Lógica cliente | JavaScript en `Code/ScriptLibraries/*.js` (prefijo **`JSFr*`** por dominio funcional) |
+| Lógica Notes “clásica” | **LotusScript** en `*.lss` (`LSComunes`, `LSFlujo`, `LSCorreo`, etc.) y **agentes** en `Code/Agents` |
+| Marcado / recursos web | `WebContent/` (Bootstrap, jQuery, CKEditor, tablefilter, etc.) |
+
+## Arquitectura funcional (resumen)
+
+- **Documentos Notes** (`Forms/`, ~69 formularios): dominios como certificaciones, flujos, estados, sedes, tipos de certificación, reconocimientos, transiciones, **PME / PEQ / LUP / IMP / HAN / CAPDO** (mejoras, equipos, lecciones, herramientas de análisis, etc.), registro de capacitaciones, reportes, administración.
+- **Vistas Notes** (`Views/`, centenares): listados, programáticas `(Prog *)`, búsquedas por consecutivo/autor/estado/fecha, vistas “Admon”, impresión, etc.
+- **XPages** (`XPages/`, ~47 páginas):
+  - Prefijo **`xv*`**: pantallas de **vista** enlazadas a `xp:dominoView` y vistas tipo `vw*` / nombres en `Views/`.
+  - Prefijo **`xa*`**: páginas de **servicio** (p. ej. `xaServicios.xsp`) con `rendered="false"` que despachan acciones en `afterRenderResponse` según el parámetro `accion` (patrón tipo **API/ajax interna** que escribe JSON con `headerResponse` / `footerResponse` desde `ssCommon.jss`).
+- **Controles reutilizables** (`CustomControls/`): p. ej. **`ccLayout`** (cabecera, modal, carga de CSS/JS globales, objeto global `application` en línea con `getWebDbName()`, página actual, usuario, rutas), **`ccLayoutVista`** para envolver tablas de vista.
+- **Arranque**: en metadatos de base, lanzamiento web típico hacia página tipo **`pgPrincipal`** y frameset **`frmsLotus`** (Notes client usa frameset).
+
+## Convenciones de código útiles para la IA
+
+- **Servidor**: incluir `ssCommon` (`<xp:script src="ssCommon" clientSide="false"/>`) cuando haga falta JSON, `@DbLookup`, `session`, `database`, etc.
+- **Cliente**: scripts por funcionalidad `JSFr<Nombre>.js` alineados con formularios/vistas (p. ej. certificaciones, flujos, reportes).
+- **Integración UI**: Bootstrap + jQuery + CKEditor + Select2 + Handlebars (según `ccLayout.xsp`).
+- Los nombres de vistas en código suelen ser **`vw*`** o coincidir con diseños en `Views/` (espacios y caracteres especiales aparecen a veces como `_2f` en nombres de archivo exportados).
+
+## Qué debe evitar la IA
+
+- No asumir **package.json**, bundlers o despliegue como SPA moderna salvo que existan en el repo.
+- No inventar endpoints REST ajenos al patrón **XPages + `xaServicios` + parámetro `accion`** sin verificar el código.
+- Tratar **ACL, rutas UNC de servidor y réplicas** como datos sensibles de entorno; no reproducirlos en documentación pública.
+
+## Archivos de referencia rápida
+
+- Layout y shell web: `CustomControls/ccLayout.xsp`
+- Utilidades respuesta HTTP y helpers servidor: `Code/ScriptLibraries/ssCommon.jss`
+- Multiplexor de acciones AJAX: `XPages/xaServicios.xsp`
+- Ejemplo vista maestro: `XPages/xvMaestroCertificaciones.xsp` + vista `vwMaestroCertificaciones`

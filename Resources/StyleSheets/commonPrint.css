@@ -1,0 +1,81 @@
+@media print {
+
+	*{
+    	color-adjust: exact;
+    	-webkit-print-color-adjust: exact;
+    	print-color-adjust: exact;
+    }
+	
+	body {
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+	
+	table {	
+	    font-size: 15px !important;
+	    margin-bottom: 20px;    
+	}
+	
+	table, td, tr {
+		border: 1px solid #ddd;   	
+	    border-collapse: collapse;	    
+	}
+	
+	table td {
+		height: 26px;
+		padding: 4px;
+	}
+	
+	.cabeza {
+		font-size: 24px;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	div.contenido {
+		position: relative;
+	    top: 50px;
+	}
+	
+	p {
+		float: left;
+		clear: both;
+	}
+		
+	a {
+		text-decoration: none;
+	}
+	
+	@page { margin: 1cm }
+	
+	table, tr { 
+		page-break-inside : avoid;
+	}
+	
+	.close {
+		display: none;
+	}
+	
+	.descripcionSituacion img {
+		width: 100%;
+    	height: 200px;	
+	} 
+	
+	.seccionPorQue table, .acciones table, .docAsociados table{
+		width: 100%;
+	}
+	
+	#ajaxLoadingMessage, #loading, #dModal {
+		display: none !important;
+	}
+	
+	.imgP, img {
+		width: 100%;
+	}
+	
+	.tdFondoHeaderImp {
+		background: #bfbfbf !important;
+		font-size: 13px;
+	}
+}

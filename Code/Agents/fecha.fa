@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='filter' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='14e2' unid='1762948D61932E5205257F10007B74B4' sequence='8'>
+<created><datetime>20151203T172828,04-05</datetime></created>
+<modified><datetime>20250604T101655,59-05</datetime></modified>
+<revised><datetime>20250604T101655,58-05</datetime></revised>
+<lastaccessed><datetime>20250604T101655,58-05</datetime></lastaccessed>
+<addedtofile><datetime>20161016T134739,74-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$TITLE' sign='true'><text>fecha</text></item>
+<item name='$AssistType' sign='true'><number>65412</number></item>
+<item name='$AssistLastRun' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$AssistDocCount' sign='true'><number>0</number></item>
+<item name='$FlagsExt' sign='true'><text/></item>
+<item name='$AssistFlags' sign='true'><text>Es</text></item>
+<item name='$AssistTrigger'><text>4</text></item>
+<item name='$AssistInfo' sign='true'>
+<rawitemdata type='11'>
+AQAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</rawitemdata></item>
+<item name='$AssistQuery' sign='true'>
+<rawitemdata type='f'>
+gQYAAAAA
+</rawitemdata></item>
+<item name='$AssistAction' sign='true'>
+<rawitemdata type='10'>
+gQKE/2YAAAAAAFwAXAADADgAEABmZWNoYVB1YmxpY2FjaW9uAAAAAAAAAHyfQAAAAAAAAAAAKEAA
+AAAAAAAAAD9ASwMDAAcADgAHAAkxUzJTM1MAAAAIAGYAAwAHAAwABgAJMFJMMVM=
+</rawitemdata></item>
+<item name='$AssistAction_Ex' sign='true'>
+<rawitemdata type='14'>
+gQI=
+</rawitemdata></item>
+<item name='$Restricted' sign='true'><number>1</number></item>
+<item name='$Flags'><text>fP3</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$AssistRunInfo' summary='true'>
+<rawitemdata type='3'>
+BgAAAgAACADeFAAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAQQEAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAvPFJADt/JQUDAAAAEs5JADt/JQW2YlwANnwlBQAAAAAAAAAAAAAAAAAAAAAAAAAASW5pY2lh
+ZGEgbGEgZWplY3VjaaJuIGRlbCBhZ2VudGUgJ2ZlY2hhJyBlbCBkoWEgMTUvMDEvMjAxNiAwODoy
+NzozOSBhLiBtLg0KQXBsaWNhbmRvIGEgbG9zIGRvY3VtZW50b3Mgc2VsZWNjaW9uYWRvcy4gMyBl
+biB0b3RhbA0KRG9jdW1lbnRvcyBxdWUgY3VtcGxlbiBsYXMgY29uZGljaW9uZXMgZGUgbGEgYqNz
+cXVlZGE6IDMuDQpTZSBoYW4gbW9kaWZpY2FkbyAzIGRvY3VtZW50b3MgbWVkaWFudGUgdW5hIGai
+cm11bGENCkZpbmFsaXphZGEgbGEgZWplY3VjaaJuIGRlbCBhZ2VudGUgJ2ZlY2hhJyBlbCBkoWEg
+MTUvMDEvMjAxNiAwODoyNzo0MCBhLiBtLg0KAA0KegBffiUFDwAAAPs9VAAIfyUF7qZVAAh/JQU1
+BgAAAAAAAF2EW2Z67G3XCQAAAAAAnAMAABQGAAYAAAAAACBnYAIBSYVkAQBgABBWiS06RlbCu12/
+XqhQMOQNnDxy0pxBQwcEijEpQMiAAWNGywVi1GABYsiSKW/qyBlTBkQLEEbklCFTdokxb0AscRNG
+jJgyblyACMKGDUjyxtwHyswpI8duES4UGHkjBwSbtGe4mZPGzdlCX9yDSZIhRZxMKeKiDRmQ2rEZ
+OnB0vHgxZm0XaeiG4LKUNi/ZGGUUqHiZ0ZIiRJJQeSLFBRw2dc4eMsdlIXSYhL0EBYgTY5+AI+ZN
+GDlkTsZyIs1cNbBHQcI/89KZQxCzFdEJeyIboYgcubWqhWGW5OQ528icOXTSZq2Q8wBhJ2wVYXcC
+MczXsNZ6gE2ZPGbCgCizZk0akJpxpDpuQNApg4fuCW3KDIMFos0wXXPTCFvBmTJyFyzPydsaI6g7
+XJ41bMJerBTSqslJWZ5roBhCRw6bF0PakFkxJIVLslEdunpoqeaCy3YOEaQ5f5MGDlwNfi84eyZ9
+4nrCynpOae6nCoppYW3Jz2SEIHLKhNUKUMJqB5DeUErz4gWIJkmmTEni5IiChGSJJnPO0jnIpiwF
+mGNnmKlhsC0HaIalkgNSmgHCrSQkjBsQb86AQMFjChUpT/PwidAHKzxe0hNSeog5bcqwYUNXk4QC
+ya94shRxJJGSOWXG1JXG5WXzWClzxu1ow2yj9Q2kKmYKV6ctk3hFYLbmkXUn8cCQidiJKZM20Awt
+7TJX8jVRibpM1dzUcfmHp2G6
+</rawitemdata></item>
+<item name='$AssistVersion'><datetime>20250604T101654,93-05</datetime></item></note>
+

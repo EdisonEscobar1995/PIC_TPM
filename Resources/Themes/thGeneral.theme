@@ -1,0 +1,46 @@
+
+	<!--
+		The default theme contents use theme inheritance. Application themes
+		can extend an existing global theme using the extends attribute.
+		Existing themes include the following options: 1. webstandard 2. oneui
+		3. notes
+	-->
+	<!--
+		<theme extends="webstandard"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd"
+		>
+	-->
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd">
+	<resources>
+		<metaData>
+			<charset>utf-8</charset>
+		</metaData>
+		<metaData>
+			<name>viewport</name>
+			<content>width=device-width, initial-scale=1.0</content>
+		</metaData>
+
+	</resources>
+
+	<control override="false">
+		<name>ViewRoot</name>
+		<property>
+			<name>pageTitle</name>
+			<value>#{javascript:@DbTitle()}</value>
+		</property>
+		<property mode="concat">
+			<name>styleClass</name>
+			<value>front-page transparent-header</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>#{javascript:
+            var response = facesContext.getExternalContext().getResponse();
+            response.setHeader("X-UA-Compatible", "IE=Edge");
+        }</value>
+		</property>
+	</control>
+
+</theme>

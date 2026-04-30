@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='7e2' unid='5DF455FB9B2DC26105257C31004C85F6' sequence='42'>
+<created><datetime>20131128T085550,30-05</datetime></created>
+<modified><datetime>20260126T222214,51-05</datetime></modified>
+<revised><datetime>20260126T222214,50-05</datetime></revised>
+<lastaccessed><datetime>20260126T222214,50-05</datetime></lastaccessed>
+<addedtofile><datetime>20161016T134731,64-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>Acceso</text><text>sfrAcceso</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sfrAcceso</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAzP8IAAAAAACF/wgAAQAACt0G
+AACt/6n/KAEBABgABAAcARwBAAD4AAEACAA8c2NyaXB0PgUABQBlcnJvcgABAAAACwKvAMIAWAAB
+ABIAbG9jYXRpb24uaHJlZiA9ICcvBQAJAHdlYkRiTmFtZQAiAgEAEgAvZnJFcnJvcj9PcGVuJm1z
+Zz0iAgUABQBlcnJvcgAiAgEAAQAnACICrgBqAIkABQAFAHNlZGVzAAEAAAAKAhwCrwBSAEYAAQAS
+AGxvY2F0aW9uLmhyZWYgPSAnLwUACQB3ZWJEYk5hbWUAIgIBABQAL2ZyRXJyb3I/T3BlbiZtc2c9
+NyciAq4ADAABAAAArgAEALUFIgIBAAkAPC9zY3JpcHQ+ACICAwAHACIAGwAJMlI1UzZTOFIxOFIx
+OVMyMFMyNFIzMFIzM1IAhf8IAAEAAAqqAt4GAACuAIX/CAABAAAKzf8IAAAAAAA=
+</rawitemdata></item></note>
+

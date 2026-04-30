@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='12.0'
+ maintenanceversion='2.0' replicaid='0525804E00673626'>
+<noteinfo noteid='97a' unid='FF83912062BF139D05257D62004657FF' sequence='41'>
+<created><datetime>20140929T074820,47-05</datetime></created>
+<modified><datetime>20260203T213503,48-05</datetime></modified>
+<revised><datetime>20260203T213503,47-05</datetime></revised>
+<lastaccessed><datetime>20260203T213503,47-05</datetime></lastaccessed>
+<addedtofile><datetime>20161016T134732,63-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$Fields'><text>maestroFormularios</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+</rawitemdata></item>
+<item name='$TITLE'><text>maestroFormularios</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$Body' summary='true' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AHgAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAIr/MAOAAQEFBDACAAAAAAAAAgEAAAr6AgAAAAAAABIAAAAAAPoC
+AQBkABAAb3BjaW9uRXZhbHVhY2lvbgUADQBzaG93T3B0aW9uRVZBAAEAAgBTaQoCrwAwACQAAQAZ
+AEV2YWx1YWNpom4gfCBmckV2YWx1YWNpb24ArgAMAAEAAACuAAQAtQMDAAcAFAAOAAkxUzJTNVM2
+UzhTMTBTAQBuABMAb3BjaW9uQ2VydGlmaWNhY2lvbgAFAA4Ac2hvd09wdGlvbkNFUlQBAAIAU2kK
+Aq8ANgAqAAEAHwBDZXJ0aWZpY2FjaaJuIHwgZnJDZXJ0aWZpY2FjaW9uAK4ADAABAAAArgAEALUD
+AwAHABYAEAAJMFIxUzJTNVM2UzhTMTBTAQCyAQgAb3BjaW9uZXMBABYARXF1aXBvIHRyYWJham8g
+fCBmclBFUQEAGwBMZWNjaaJuIGRlIHVuIHB1bnRvIHwgZnJMVVAAHwIBACMASW5mbyBNUCAvIExl
+Y2Npom4gYXByZW5kaWRhIHwgZnJJTVAAHwIBAA4ATWVqb3JhIHwgZnJQTUUfAgEADwBDQVBETyB8
+IGZyQ0FQRE8AHwIBAB8ASGVycmFtaWVudGEgZGUgYW6gbGlzaXMgfCBmckhBTgAfAgEALgBIZXJy
+YW1pZW50YSBkZSBhbqBsaXNpcyBiYWpvIGltcGFjdG8gfCBmckhBTkJJHwIBAC4ASGVycmFtaWVu
+dGEgZGUgYW6gbGlzaXMgYWx0byBpbXBhY3RvIHwgZnJIQU5BSR8CAQATAEFjY2lvbmVzIHwgZnJB
+Y2Npb24AHwIBADMAUmVnaXN0cm8gZGUgQ2FwYWNpdGFjaW9uZXMgfCBmclJlZ2lzdHJvQ2FwYWNp
+dGFjaW9uAB8CBQAQAG9wY2lvbkV2YWx1YWNpb24fAgUAEwBvcGNpb25DZXJ0aWZpY2FjaW9uAB8C
+AwAHACwAJQAJMFIxUzJTNFI2UjhSMTBSMTJSMTRSMTZSMThSMjBSMjJSMjRSAAAAFAAFAAgAb3Bj
+aW9uZXNeAQMABwAKAAMACTBSAG1hZXN0cm9Gb3JtdWxhcmlvc2IOAQCEAAAAAAAAAAAA3gYAAIr/
+hf8IAAEAAAo=
+</rawitemdata></item></note>
+

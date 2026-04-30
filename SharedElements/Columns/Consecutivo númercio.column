@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='147a' unid='8C4C77F6588F7E6005257EED0069E51E' sequence='24'>
+<created><datetime>20151029T141639,34-05</datetime></created>
+<modified><datetime>20250605T010512,16-05</datetime></modified>
+<revised><datetime>20250604T101927,26-05</datetime></revised>
+<lastaccessed><datetime>20250605T010512,15-05</datetime></lastaccessed>
+<addedtofile><datetime>20161018T114928,79-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>Consecutivo númercio</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+nAACAF4AFAAkY29uc2VjdXRpdm9OdW1lcmljbwUACwBjb25zZWN1dGl2bwABAAAACwKvACoAGAAF
+AAsAY29uc2VjdXRpdm8AWAGuABIAAAAAAAAAAAAAAK4ABAC1AwMABQAwACsAAwAUAAkABAAkY29u
+c2VjdXRpdm9OdW1lcmljbyRDb25mbGljdCRSRUYABAAEAAAACABmAAMA
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+IQABAABEAWYAAAAUACRjb25zZWN1dGl2b051bWVyaWNv
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAEACAAAAFZDDQAUABQAbAAAAFAABQAAB4AAAAAAAAAAAAICAAAAJGNvbnNlY3V0aXZvTnVt
+ZXJpY29Db25zZWN1dGl2byBuo21lcmljb2wAAgBeABQAJGNvbnNlY3V0aXZvTnVtZXJpY28FAAsA
+Y29uc2VjdXRpdm8AAQAAAAsCrwAqABgABQALAGNvbnNlY3V0aXZvAFgBrgASAAAAAAAAAAAAAACu
+AAQAtQMDAAcADAAFAAkzUzRTACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEAAQABAAAAAAAAAAAA
+V0MGAQAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAEAAAAAEA////
+AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAABAAAAAAABAAAAAAAAAAgA
+AAAAAAEA
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Verdana</text><text>6</text><text>38</text><text>Verdana</text></textlist></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>^Y</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item></note>
+

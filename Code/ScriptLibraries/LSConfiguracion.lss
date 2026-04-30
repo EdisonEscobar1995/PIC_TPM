@@ -1,0 +1,189 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Class ControlConfiguracion
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Class ControlConfiguracion
+	
+	Private ns As NotesSession
+	Private db As NotesDatabase 
+	
+	Public Sub new
+		Set ns = New NotesSession
+		Set db = ns.CurrentDatabase
+	End Sub
+	
+	Public Function violaClavePrimaria (sVista As String, claves As Variant, unid As String) As Boolean
+		violaClavePrimaria = False
+		Dim vw As NotesView
+		Dim nd As NotesDocument
+		Set vw = db.GetView(sVista)
+		Set nd = vw.GetDocumentByKey(claves, True)
+		If Not nd Is Nothing Then
+			If nd.UniversalID <> unid Then
+				violaClavePrimaria = True
+			End If
+		End If			
+	End Function
+	
+	Public Function guardarFlujo(nd As NotesDocument) As String
+		guardarFlujo = ""
+		Dim claves(0) As String
+		Dim formularios As Variant
+		Dim nomFormulario As String
+		claves(0) = nd.nombre(0)
+		If violaClavePrimaria("vwProgFlujos", claves, nd.unid(0)) Then
+			guardarFlujo = "Debe modificar el nombre del flujo. El valor ingresado ha sido configurado previamente."
+		Else
+			formularios = Split(nd.formularios(0), ";")
+			ForAll x In formularios
+				Select Case x
+				Case "frPEQ":
+					nomFormulario = "Equipo trabajo"
+				Case "frLUP":
+					nomFormulario = "Lección de un punto"
+				Case "frIMP":
+					nomFormulario = "Info MP / Lección aprendida"
+				Case "frPME":
+					nomFormulario = "Mejora"
+				Case "frCAPDO":
+					nomFormulario = "CAPDO" 
+				Case "frHAN":
+					nomFormulario = "Herramienta de análisis" 
+			End Select
+				claves(0) = x
+				If violaClavePrimaria("vwProgFormulariosFlujo", claves, nd.unid(0)) Then
+					guardarFlujo = "El formulario " + nomFormulario + " ha sido configurado previamente con otro flujo."
+					Exit ForAll
+				End If
+			End ForAll
+		End If	
+	End Function
+
+	Public Function guardarEstado(nd As NotesDocument) As String
+		guardarEstado = ""
+		Dim claves(1) As String
+		Dim keys(0) As String
+		claves(0) = nd.flujo(0)
+		claves(1) = nd.nombre(0)
+		If violaClavePrimaria("vwProgEstadosFlujo", claves, nd.unid(0)) Then
+			guardarEstado = "Debe modificar el nombre del estado. El valor ingresado ha sido configurado previamente para el flujo seleccionado."
+		ElseIf nd.inicial(0) = "Si" Then
+			keys(0) = nd.flujo(0)
+			If violaClavePrimaria("vwProgEstadosIniciales", keys, nd.unid(0)) Then
+				guardarEstado = "Ya existe un estado configurado como Inicial para el flujo seleccionado."
+			End If
+		End If
+	End Function
+	
+	Public Function guardarNotificacion(nd As NotesDocument) As String
+		guardarNotificacion = ""
+		Dim claves(0) As String
+		claves(0) = nd.nombre(0)
+		If violaClavePrimaria("vwProgNotificaciones", claves, nd.unid(0)) Then
+			guardarNotificacion = "Debe modificar el nombre de la notificación . El valor ingresado ha sido configurado previamente."
+		End If
+	End Function
+	
+	Public Function guardarTransicion(nd As NotesDocument) As String
+		guardarTransicion = ""
+		Dim claves(2) As String
+		claves(0) = nd.flujo(0)
+		claves(1) = nd.estadoOrigen(0)
+		claves(2) = nd.estadoDestino(0)
+		If violaClavePrimaria("vwProgTransiciones", claves, nd.unid(0)) Then
+			guardarTransicion = "Los valores de flujo, estado origen y estado destino coinciden con los de otro documento configurado previamente."
+		End If
+	End Function
+	
+	Public Function guardarReporte(nd As NotesDocument) As String
+		guardarReporte = ""
+		Dim claves(0) As String
+		Dim forms As Variant
+		Dim nomForm As String
+		claves(0) = nd.nombre(0)
+		If violaClavePrimaria("vwProgReportes", claves, nd.unid(0)) Then
+			guardarReporte = "Debe modificar el nombre del reporte. El valor ingresado ha sido configurado previamente."
+		End If
+	End Function
+	
+	Public Function guardarDocumento(nd As NotesDocument) As String
+		guardarDocumento = ""
+		Dim claves(2) As String
+		Dim campo As String 
+		claves(0) = nd.form(0)
+		claves(1) = nd.sede(0)
+		If nd.form(0) = "frPEQ" Or nd.form(0) = "frEquipoMaquina" Then 
+			claves(2) = nd.nombre(0)
+			campo = "nombre"
+		Else
+			claves(2) = nd.titulo(0)
+			campo = "título"
+		End If
+		
+		If violaClavePrimaria("vwProgDocumentos", claves, nd.unid(0)) Then
+			guardarDocumento = "Debe modificar el "+campo+" del documento. El valor ingresado ha sido creado previamente en la misma sede."
+		End If
+	End Function	
+	
+	Public Function guardarReconocimiento(nd As NotesDocument) As String
+		guardarReconocimiento = ""
+		Dim claves(1) As String
+		claves(0) = nd.categoria(0)
+		claves(1) = nd.nombre(0)
+		If violaClavePrimaria("vwProgCfgReconocimientos", claves, nd.unid(0)) Then
+			guardarReconocimiento = "Debe modificar la categoría o el nombre del reconocimiento. Los valores ingresados coinciden con los de otro documento configurado previamente."
+		End If
+	End Function
+	
+	Public Function guardarEnlace(nd As NotesDocument) As String
+		guardarEnlace = ""
+		Dim claves(0) As String
+		claves(0) = nd.nombre(0)
+		If violaClavePrimaria("vwProgEnlaces", claves, nd.unid(0)) Then
+			guardarEnlace = "Debe modificar el nombre del enlace. El valor ingresado ha sido configurado previamente."
+		End If
+	End Function
+	
+	Public Function guardarEquipoMaquina(nd As NotesDocument, vista As String) As String
+		guardarEquipoMaquina = ""
+		Dim claves(0) As String
+		claves(0) = nd.nombre(0)
+		If violaClavePrimaria(vista, claves, nd.unid(0)) Then
+			guardarEquipoMaquina = "Debe modificar el nombre del equipo. El valor ingresado ha sido configurado previamente."
+		End If
+	End Function
+	
+	Public Function guardarSede(nd As NotesDocument) As String
+		guardarSede = ""
+		Dim claves(0) As String
+		claves(0) = nd.nombre(0)
+		If violaClavePrimaria("vwProgSedes", claves, nd.unid(0)) Then
+			guardarSede = "Debe modificar el nombre del enlace. El valor ingresado ha sido configurado previamente."
+		End If
+	End Function
+	
+	Public Function guardarTipoCertificacion(nd As NotesDocument) As String
+		guardarTipoCertificacion = ""
+		Dim claves(1) As String
+		claves(0) = nd.certificacion(0)
+		claves(1) = nd.nombre(0)
+		If violaClavePrimaria("vwProgTipoCertificacionesCertificacion", claves, nd.unid(0)) Then
+			guardarTipoCertificacion = "Debe modificar la certificación o el nombre del tipo de certificación. Los valores ingresados coinciden con los de otro documento configurado previamente."
+		End If
+	End Function
+	
+	Public Function guardarHabilidad(nd As NotesDocument) As String
+		guardarHabilidad = ""
+		Dim claves(2) As String
+		claves(0) = nd.nombre(0)
+		claves(1) = nd.certificacion(0)
+		claves(2) = nd.tipoCertificacion(0)
+		If violaClavePrimaria("vwProgHabilidadesNombre", claves, nd.unid(0)) Then
+			guardarHabilidad = "Debe modificar la certificación, tipo de certificación o el nombre de la habilidad. Los valores ingresados coinciden con los de otro documento configurado previamente."
+		End If
+	End Function
+End Class

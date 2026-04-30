@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	
+	<xp:this.resources>
+	</xp:this.resources>
+
+	<xp:this.data>
+		<xp:dominoView var="view1" viewName="vwPMEPeq" expandLevel="1">
+			<xp:this.search><![CDATA[#{javascript:viewScope.get("clave")}]]></xp:this.search>
+		</xp:dominoView>
+	</xp:this.data>
+
+	<xc:ccLayout>
+		<xp:this.facets>
+			<xp:panel xp:key="facet_1">
+				<xc:ccLayoutVista newPage=""
+					viewPanel="vista" categorized="true" pager="true"
+					title="PME / Equipo trabajo" create="true">
+					<xp:this.facets>
+						<xp:viewPanel xp:key="facet_1"
+							rows="#{javascript:sessionScope.rows}" value="#{view1}"
+							id="vista" viewStyle="width:100%" var="fila"
+							dataTableStyleClass="mainTable table table-bordered table-colored table-striped">
+							
+							<xp:viewColumn columnName="total"
+								id="viewColumn1">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Total"
+										xp:key="header" id="viewColumnHeader1">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+								<xp:this.converter>
+									<xp:convertNumber type="number"
+										integerOnly="true">
+									</xp:convertNumber>
+								</xp:this.converter>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="nomPEQ"
+								id="viewColumn2">
+								<xp:this.facets>
+									<xp:viewColumnHeader
+										value="Generado por" xp:key="header" id="viewColumnHeader2">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="Ano"
+								id="viewColumn6">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Año"
+										xp:key="header" id="viewColumnHeader6">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="Mes"
+								id="viewColumn3">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Mes"
+										xp:key="header" id="viewColumnHeader3">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="consecutivo"
+								id="viewColumn4" contentType="html">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Consecutivo"
+										xp:key="header" id="viewColumnHeader4">
+									</xp:viewColumnHeader>									
+								</xp:this.facets>
+								<xp:this.value><![CDATA[#{javascript:fila.getUniversalID() ? "<a href='0/"+fila.getUniversalID()+"'>"+fila.getColumnValue("consecutivo")+"</a>" : ""}]]></xp:this.value>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="titulo"
+								id="viewColumn5">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Título"
+										xp:key="header" id="viewColumnHeader5">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="FechaCreacion"
+								id="viewColumn7">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Fecha creación (d/m/a)"
+										xp:key="header" id="viewColumnHeader7">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="estado"
+								id="viewColumn8">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Estado"
+										xp:key="header" id="viewColumnHeader8">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+							</xp:viewColumn>							
+						</xp:viewPanel>
+					</xp:this.facets>
+				</xc:ccLayoutVista>
+			</xp:panel>
+		</xp:this.facets>
+	</xc:ccLayout>
+</xp:view>

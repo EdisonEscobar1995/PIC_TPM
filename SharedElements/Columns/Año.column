@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='366cfe' unid='A79BDB0A63F3C63905257EC9001C4D65' sequence='70'>
+<created><datetime>20150923T000908,21-05</datetime></created>
+<modified><datetime>20250605T010506,38-05</datetime></modified>
+<revised><datetime>20250604T101921,10-05</datetime></revised>
+<lastaccessed><datetime>20250605T010506,37-05</datetime></lastaccessed>
+<addedtofile><datetime>20221117T010258,44-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>Año</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+YgEIAPAABQAEAGZvcm0BAAUAZnJIQU4ACgIFAAQAZm9ybQEABwBmckNBUERPAAoCHQIFAAQAZm9y
+bQEABQBmckxVUAAKAh0CrwCmAFIABQAHAG1lbnNhamUAAQAYAFNpbiBmZWNoYSBkZSBpbnNjcmlw
+Y2mibgkCBQAFAGZlY2hhAAUAEABmZWNoYUluc2NyaXBjaW9uCQKzAq4AVAAFAAcAbWVuc2FqZQAB
+ABgAU2luIGZlY2hhIGRlIHB1YmxpY2FjaaJuCQIFAAUAZmVjaGEABQAQAGZlY2hhUHVibGljYWNp
+b24JArMCrgAEALUDAwACAEYAAgAkMAUABQBmZWNoYQBWAQEAAAALAq8AKAAUAAUABQBmZWNoYQBO
+AVYBrgAUAAUABwBtZW5zYWplAK4ABAC1AwMABQAeABkAAwACAAkABAAkMCRDb25mbGljdCRSRUYA
+BAAEAAAACABmAAMA
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABEAGYHAAACACQw
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAEACAAAAFZDAwACAAMAmAEAAFAABQAAB4AAAAAAAAAAAAICAAAAJDBBpG+YAQgA8AAFAAQA
+Zm9ybQEABQBmckhBTgAKAgUABABmb3JtAQAHAGZyQ0FQRE8ACgIdAgUABABmb3JtAQAFAGZyTFVQ
+AAoCHQKvAKYAUgAFAAcAbWVuc2FqZQABABgAU2luIGZlY2hhIGRlIGluc2NyaXBjaaJuCQIFAAUA
+ZmVjaGEABQAQAGZlY2hhSW5zY3JpcGNpb24JArMCrgBUAAUABwBtZW5zYWplAAEAGABTaW4gZmVj
+aGEgZGUgcHVibGljYWNpom4JAgUABQBmZWNoYQAFABAAZmVjaGFQdWJsaWNhY2lvbgkCswKuAAQA
+tQMDAAcAVABNAAkzUzRTNVM2UzdTOFM5UzEwUzExUzEyUzE0UjE2UjE3UzE4UzIwUjIxUzIyUzIz
+UjI1UjI3UlQyOFMyOVMzMVJUMzJTMzNTMzRSMzVSAAIARgACACQwBQAFAGZlY2hhAFYBAQAAAAsC
+rwAoABQABQAFAGZlY2hhAE4BVgGuABQABQAHAG1lbnNhamUArgAEALUDAwAHAAwABgAJMFJSNlMm
+AAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDBgEABwAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABCABAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAA
+AAEA////AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Verdana</text><text>6</text><text>38</text><text>Verdana</text></textlist></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>^Y</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item></note>
+

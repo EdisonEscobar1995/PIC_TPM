@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><note xmlns="http://www.lotus.com/dxl" class="filter" maintenanceversion="2.0" replicaid="0525804E00673626" version="12.0">
+<noteinfo noteid="31f74e" sequence="42" unid="5DB20C60F31513CE052586B7007616B0">
+<created><datetime>20210414T162950,56-05</datetime></created>
+<modified><datetime>20260126T235042,65-05</datetime></modified>
+<revised><datetime>20260126T235042,64-05</datetime></revised>
+<lastaccessed><datetime>20260126T235042,64-05</datetime></lastaccessed>
+<addedtofile><datetime>20210415T010239,42-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$POID"><datetime>20250604T101928,50-05</datetime></item>
+
+
+<item name="$TITLE" sign="true"><text>OLDLSComunes</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item></note>

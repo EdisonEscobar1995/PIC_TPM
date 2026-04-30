@@ -1,0 +1,476 @@
+body, form{
+margin:0px;
+height:auto;
+}
+
+.contenedorCabezote{
+position:fixed;
+top:0px;
+left:0px;
+width:100%;
+background:#fff;
+z-index:1025;
+}
+
+.fondoCabezote{
+width:100%;
+position:relative;
+color:#000;
+}
+
+.titCabezote{
+font-size:32px;
+font-weight:bold;
+text-rendering:optimizelegibility;
+position:absolute;
+top:25px;
+left:20px;
+}
+
+.usuario{
+font-size:13px;
+position:absolute;
+top:55px;
+right:20px;
+color:#ffffff;
+}
+
+.logoCompania{
+position:absolute;
+right:20px;
+top:5px;
+}
+
+.aviso{
+color:#ff0000;
+}
+
+font{
+color: inherit;
+font-family: inherit;
+font-size: inherit;
+font-weight: normal;
+}
+
+.cabeza{
+position:fixed;
+/*top:18.4%;*/
+top:20%;
+left:auto;
+width:95%;
+background:#fff;
+z-index:1000;
+}
+
+.cabeza .botones{
+position:absolute;
+top:20px;
+right:0px
+}
+
+.titulo, .subtitulo{
+text-align:left;
+}
+
+.navbar{
+margin-bottom:5px;
+}
+
+/* 
+Estilo para modificar los colores del menú de bootstrap
+*/
+
+.fondoMenu{
+background:#000;
+font-size: 13px;
+}
+
+.fondoMenu .nav > li > a {
+position:relative;
+color:#fff;
+text-shadow:none;
+}
+
+.fondoMenu .nav > li > a:focus, .fondoMenu .nav > li > a:hover{
+background: none;
+color:#fff;
+}
+
+.fondoMenu .nav li.dropdown.open > .dropdown-toggle, .fondoMenu .nav li.dropdown.active > .dropdown-toggle, .fondoMenu .nav li.dropdown.open.active > .dropdown-toggle {
+background: none;
+color:#fff;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a{
+background:#000;
+filter:none:	
+}
+
+table .tdSubtitulo{
+font-weight:bold;
+text-align:center;
+}
+
+.input-append{
+margin-bottom:0px;
+}
+
+.input-append input, .input-append .add-on{
+height:12px;
+line-height:12px;
+font-size:12px;
+margin-bottom:5px;
+}
+
+.icon-dark-red{
+color:#da4f49;
+}
+
+.enlaceAnexo{
+margin-bottom:5px;
+}
+
+.item{
+line-height:15px;
+}
+
+#dVista {
+	position: relative;
+}
+
+#dVista table.mainTable {
+margin: 0px;
+width: 100%;
+}
+
+#dVista .mainTable td {
+	padding: 8px 10px;
+	border-top:1px solid #E8E8E9;
+}
+
+#dVista .mainTable th {
+	padding: 8px 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#dVista .botonesxv {
+	position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+#dVista .botonesxv .botonVista {
+	margin-right: 5px;
+}
+
+#dVista .tdCheck {
+	width: 30px;
+    text-align: center;
+}
+
+.pager > span > span > span, .pager > div > span {
+	padding: 0px 12px;
+    margin: 0 2px;
+    display: inline-block;
+    border-left: 1px solid;
+}
+
+.pager > span > span > :first-child, .pager > div > :first-child {
+    border-left: 0px;
+}
+
+.imagenNormal{
+margin-bottom:10px;
+}
+
+.imagenAntesDespues{
+margin-bottom:10px;
+width:100%;
+height:400px;
+}
+
+.bold{
+font-weight:bold;
+}
+
+#dEstructura ul{
+list-style:disc;
+} 
+
+.ayuda{
+margin-left:3px;
+cursor:pointer;
+}
+
+.dPrintLabelAyuda {
+    font-size: 10px;
+}
+
+.radio{
+font-size:12px;
+}
+
+.cke_dialog_contents .cke_dialog_ui_input_text{
+height:22px;
+}
+
+.select2-selection__clear {
+background: rgba(0, 0, 0, 0) url("select2.png") no-repeat scroll right top;
+cursor: pointer;
+display: block;
+font-size: 1px;
+height: 13px;
+outline: medium none;
+position: absolute;
+right: 7px;
+top: 7px;
+width: 12px;
+z-index: 1;
+}
+
+body .modalLarge{
+width:1220px;
+margin-left:-610px;
+}
+
+body .modalLarge1 {
+    width: 1140px;
+    margin-left: -571px;
+
+}
+
+.bootstrap-timepicker-widget .icon-chevron-up, .bootstrap-timepicker-widget .icon-chevron-down {
+	text-decoration: none;
+}
+
+.asociarDocumento {
+	text-align: left;
+    margin-bottom: 25px;
+}
+
+.limpiar{
+    position: relative;
+    bottom: 3px;
+    right: 3px;
+}
+
+.dReentrenamiento, .dReentrenamiento label {
+	display: inline-block;
+}
+
+.dReentrenamiento label {
+	margin-right: 10px;
+    margin-left: 10px;
+}
+
+.eliminarfilasSeleccionadas {
+	float: left;
+}
+
+.regresarHome{
+	margin: 10px 0px 10px 0px;
+}
+
+.dCedula{
+	max-height:150px;
+	overflow-y: auto;
+}
+
+.th{
+	font-weight: bold;
+}
+
+#dEnlaceHAN{
+	text-align: left;
+	font-size: 18px;
+}
+
+.agregarTexto{
+	margin-left:3px;
+}
+
+#loading{
+	z-index:10000;
+}
+
+.modal-header .btn + .btn {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.col-sm-1 {
+	width: 5%;
+}
+.col-md-1 {
+	width: 10%;
+}
+
+.col-sm-2 {
+	width: 15%;
+}
+
+.col-md-2 {
+	width: 20%;
+}
+
+.col-sm-3 {
+	width: 25%;
+}
+
+.col-md-3 {
+	width: 30%;
+}
+
+td[class|="col"] > div {
+	width: 100%;
+}
+
+.imgBannerImp {
+	width: 100%;
+	height: 80%; 
+}
+
+.tdFondoHeaderImp {
+	background: #bfbfbf !important;
+	font-size: 13px;
+}
+
+/* Inicio Estilos HANBI*/
+
+/* ===== WIZARD STEPS ===== */
+/* =========================
+   VARIABLES
+========================= */
+:root {
+    --step-active: #37907c;
+    --step-inactive: #bfbfbf;
+    --badge-color: #fff149;
+}
+
+/* =========================
+   WIZARD STEPS
+========================= */
+.wizard-steps {
+	display: flex;
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    /* position: sticky;
+    top: 186px;
+    z-index: 100;
+    background: white; */
+}
+
+/* Step base */
+.wizard-steps li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    height: 50px;
+    background: var(--step-inactive);
+    color: #fff;
+    position: relative;
+    margin-right: 5px;
+    font-size: 13px;
+    line-height: 22px;
+    min-width: 190px;
+    cursor: pointer;
+    font-weight: 500;
+    /* transition: background 0.2s ease; */
+}
+
+.wizard-steps li:hover {
+    /* opacity: 0.95; */
+}
+
+/* Flecha derecha */
+.wizard-steps li:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -22px;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 22px solid var(--step-inactive);
+    z-index: 2;
+}
+
+/* Corte izquierdo */
+.wizard-steps li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 22px solid #fff;
+    z-index: 1;
+}
+
+.wizard-steps li:first-child:before {
+    display: none;
+}
+
+/* =========================
+   ESTADOS
+========================= */
+.wizard-steps li.active {
+    background: var(--step-active);
+}
+
+.wizard-steps li.active:after {
+    border-left-color: var(--step-active);
+}
+
+.wizard-steps li.completed {
+    background: #2f7f6f;
+}
+
+.wizard-steps li.completed:after {
+    border-left-color: #2f7f6f;
+}
+
+/* =========================
+   BADGE
+========================= */
+.wizard-steps .badge {
+    background: transparent;
+    border: 3px solid var(--badge-color);
+    color: var(--badge-color);
+    border-radius: 50%;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+/* =========================
+   HELPERS
+========================= */
+.clearfix {
+    clear: both;
+}
+
+/* =========================
+   SECCIONES DEL FORM
+========================= */
+.step-section {
+    display: none;
+    margin-top: 25px;
+}
+
+.step-section.active {
+    display: block;
+}
+/* Fin Estilos HANBI*/
+

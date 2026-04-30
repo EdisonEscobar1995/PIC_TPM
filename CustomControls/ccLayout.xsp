@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" pageTitle="#{javascript:return @DbTitle()}"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+		
+	<xp:this.resources>
+		<xp:script src="ssCommon" clientSide="false"></xp:script>
+	</xp:this.resources>
+		
+	<link href='bootstrap.min.css' rel='stylesheet' media='screen' />
+	<link href='bootstrap-responsive.min.css' rel='stylesheet' media='screen' />
+	<link href='bootstrap-modal.css?open' rel='stylesheet' media='screen' />
+	<link href='bootstrap-fileupload.min.css' rel='stylesheet' media='screen' />
+	<link href='font-awesome.min.css' rel='stylesheet' media='screen' />
+	<link href='select2.css' rel='stylesheet' media='screen' />
+	<link href='datepicker.css' rel='stylesheet' media='screen' />
+	<link href='datepicker.css' rel='stylesheet' media='screen' />
+	<link href='bootstrap-timepicker.min.css' rel='stylesheet' media='screen' />
+	<link href='jquery.inputpicker.css' rel='stylesheet' media='screen' />
+	<link href='common.css' rel='stylesheet' media='screen' />
+
+	<div align="center" style="display:none" class="page-container" id="general">
+		<div id="cabezote"></div>
+		<br/>
+		<br/>
+		<br/>
+		<div class="container" style="width:95%;padding:0px;margin-top:6%;">
+			<div id="dVista">
+				<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+			</div>
+		</div>
+	</div>
+
+	<div id="ajaxLoadingMessage" class="hide">
+		<p>
+			<img src="loader.gif" />
+			procesando...
+		</p>
+	</div>
+
+	<xp:text escape="false" id="computedField1">
+		<xp:this.value>
+			<![CDATA[#{javascript:return 	
+"<script> var application = {" +
+	"sWebDbName : '/" + getWebDbName() + "/'," +
+	"sXpage : '" + view.getPageName().replace("/", "").replace(".xsp", "") + "'," +
+	"sMsg : '"+param.get("msg")+"', "+
+	"sUsuarioAbbreviate : '"+@Name("[Abbreviate]",session.getEffectiveUserName())+"', "+
+	"sRutaBdTpmEC : '" + @DbLookup("","vwProgTodos","frGeneral","rutaEvaluacionesCertificaciones","[FailSilent]") + "'" +
+"}</script>"}]]>
+		</xp:this.value>
+	</xp:text>
+
+	<xp:text escape="false" id="computedField3">
+		<xp:this.value><![CDATA[#{javascript:return "<script>"
++ "if (typeof define === 'function' && define.amd) {if(define.amd.vendor =='dojotoolkit.org'){define._amd = define.amd;delete define.amd;}}"
++ "</script>"}]]></xp:this.value>
+	</xp:text>
+
+	<div id="dModal" class="modal hide fade" tabindex="-1">
+		<div class="modal-header"> 
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+		</div>
+		<div class="modal-body"></div>
+		<div class="modal-footer"></div>
+	</div>
+	
+	<div id="ajaxLoadingMessage" class="hide"><p><img src="loader.gif" /> procesando... </p></div>
+	
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="bootbox.min.js"></script>
+	<script src="bootstrap-modalmanager.js"></script>
+	<script src="bootstrap-modal.js"></script>
+	<script src="bootstrap-fileupload.min.js"></script>
+	<script src="select2.min.js"></script>
+	<script src="select2_locale_es.js"></script>
+	<script src='ckeditor/ckeditor.js'></script>
+	<script src="handlebars.js"></script>
+	<script src="bootstrap-datepicker.js"></script>
+	<script src="bootstrap-timepicker.min.js"></script>
+	<script src="jquery.inputpicker.js"></script>
+	<script src="JSCommon?Open"></script>
+	<script src="JSXView?Open"></script>
+
+	<xp:text escape="false" id="computedField4">
+		<xp:this.value><![CDATA[#{javascript:return "<script>"
++ "if (typeof define === 'function' && define._amd) {define.amd = define._amd; delete define._amd;}"
++ "</script>"}]]></xp:this.value>
+	</xp:text>
+
+	<iframe id="ifAntiLog" src="" style="display:none"></iframe>
+	<script>
+		var int = self.setInterval( function(){
+		document.getElementById("ifAntiLog").src =
+		application.sWebDbName+"pgVacia?Open&#38;login&#38;a="+Math.random();
+		}, 1000*60*15 );
+	</script>
+
+</xp:view>
+

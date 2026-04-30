@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	
+	<xp:this.resources>
+		<xp:script src="ssCommon" clientSide="false"></xp:script>
+	</xp:this.resources>
+
+	<xp:this.data>
+		<xp:dominoView var="view1" viewName="vwGrupoResponsables">
+			<xp:this.search><![CDATA[#{javascript:viewScope.get("clave")}]]></xp:this.search>
+		</xp:dominoView>
+	</xp:this.data>
+
+	<xc:ccLayout>
+		<xp:this.facets>
+			<xp:panel xp:key="facet_1">
+				<xc:ccLayoutVista newPage="frGrupoResponsables?Open"
+					viewPanel="vista" categorized="false" pager="true"
+					title="Admon / Grupo responsables" create="true">
+					<xp:this.facets>
+						<xp:viewPanel xp:key="facet_1"
+							rows="#{javascript:sessionScope.rows}" value="#{view1}"
+							id="vista" viewStyle="width:100%" var="fila"
+							dataTableStyleClass="mainTable table table-bordered table-colored table-striped">
+							<xp:viewColumn columnName="nombre"
+								id="viewColumn1" contentType="html">
+								<xp:this.facets>
+									<xp:viewColumnHeader
+										value="Nombre" xp:key="header" id="viewColumnHeader1">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+								<xp:this.value><![CDATA[#{javascript:"<a href='0/"+fila.getUniversalID()+"'>"+fila.getColumnValue("nombre")+"</a>"}]]></xp:this.value>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="responsables"
+								id="viewColumn2" contentType="html">
+								<xp:this.facets>
+									<xp:viewColumnHeader
+										value="Responsables" xp:key="header" id="viewColumnHeader2">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+							</xp:viewColumn>
+						</xp:viewPanel>
+					</xp:this.facets>
+				</xc:ccLayoutVista>
+			</xp:panel>
+		</xp:this.facets>
+	</xc:ccLayout>
+</xp:view>

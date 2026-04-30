@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='802' unid='FBB465F0DD966E0205257C3100665DD1' sequence='35'>
+<created><datetime>20131128T133806,89-05</datetime></created>
+<modified><datetime>20250605T010512,46-05</datetime></modified>
+<revised><datetime>20250604T101927,59-05</datetime></revised>
+<lastaccessed><datetime>20250605T010512,45-05</datetime></lastaccessed>
+<addedtofile><datetime>20161016T134731,71-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador DEV/O=DEV</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador DEV/O=DEV</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Administrador DEV/O=DEV</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Administrador DEV/O=DEV</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>Handlebars imagen</text><text>sfrHbImagen</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>sfrHbImagen</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQ8ApAbAB9sI9wkSCy4MSQ1lDoAPmxC3EdIS7hMJFSUWAAAA
+AAAAAAAAAAABAAAAAJSEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEAzP8IAAAAAADdBgAAhf+F/zsA
+AQAJCjxzY3JpcHQgaWQ9ImhiSW1hZ2VuIiB0eXBlPSJ4LWhhbmRsZWJhcnMtdGVtcGxhdGUiPgDS
+CAEAAIAAAN4GAACF/4ECgwQBAN0GAACF/4X/IAABAAQKPGltZyBjbGFzcz0iaW1nLXJvdW5kZWQg
+0ggBAAAA/wDeBgAAhf/dBgAAhf+F/xEAAQAFCnt7Y2xhc2V9fQDSCAEA/wD/AN4GAACF/90GAACF
+/4X/CgABAAQKIiDSCAEAAAD/AN4GAACF/90GAACF/4X/EQABAAUKe3tzdHlsZX19ANIIAQD/AP8A
+3gYAAIX/3QYAAIX/hf8PAAEABAogc3JjPSIvANIIAQAAAP8A3gYAAIX/3QYAAK3/qf8iAAEAGAAE
+ABYAFgAAABQABQAJAHdlYkRiTmFtZQADAIX/CAABAAAKqgLeBgAArgDdBgAAhf+F/wsAAQAECi8w
+LwDSCAEAAAD/AN4GAACF/90GAACF/4X/EAABAAUKe3t1bmlkfX3SCAEA/wD/AN4GAACF/90GAACF
+/4X/DwABAAQKLyRGSUxFLwDSCAEAAAD/AN4GAACF/90GAACF/4X/EwABAAUKe3thcmNoaXZvfX0A
+0ggBAP8A/wDeBgAAhf/dBgAAhf+F/wkAAQAECiIA0ggBAAAA/wDeBgAAhf/dBgAAhf+F/wkAAQAE
+Cj4A0ggBAAAA/wDeBgAAhf+BAoL/WgACAAAAAAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAlIcAAAAAAAAAAAAAAAABAAAABAAAAIMEAgDd
+BgAAhf+F/xEAAQAJCjwvc2NyaXB0PgDSCAEAAIAAAN4GAACF/83/CAAAAAAA
+</rawitemdata></item></note>
+

@@ -1,0 +1,60 @@
+# LOTUS (Domino Designer on-disk) — ignore solo ruido local/temporal
+
+###############################################################################
+# OS / Editor
+###############################################################################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*.swo
+*.tmp
+*.bak
+*.old
+*~
+
+###############################################################################
+# Eclipse / Domino Designer (workspace y artefactos locales)
+###############################################################################
+.metadata/
+.recommenders/
+*.log
+
+# Preferible no versionar (puede ser específico de cada máquina)
+.settings/
+
+# Launch configs locales
+*.launch
+
+###############################################################################
+# Java / build outputs (por si se generan localmente)
+###############################################################################
+bin/
+target/
+WebContent/WEB-INF/classes/
+*.class
+
+###############################################################################
+# Tooling JS (solo si alguien lo usa para assets)
+###############################################################################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+###############################################################################
+# IDEs
+###############################################################################
+.vscode/
+.idea/
+*.iml
+.vs/
+*.code-workspace
+
+###############################################################################
+# Secrets / env (por si aparecen en el futuro)
+###############################################################################
+.env
+.env.*

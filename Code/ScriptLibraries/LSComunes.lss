@@ -1,0 +1,920 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+Use "LSCorreo"
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Class Comunes
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Class Comunes
+	
+	Private ns As NotesSession
+	Private db As NotesDatabase
+	Private webDbName As Variant
+	
+	Public Sub new 
+		Set ns = New NotesSession
+		Set db = ns.CurrentDatabase
+		webDbName = Evaluate(|@WebDbName|)
+	End Sub
+	
+	Function getNombreMes (numMes As Integer)
+		Dim nomMes As String 
+		Select Case numMes
+			Case 1:
+				nomMes = "Enero"
+			Case 2:
+				nomMes = "Febrero"
+			Case 3:
+				nomMes = "Marzo"
+			Case 4:
+				nomMes = "Abril"
+			Case 5:
+				nomMes = "Mayo"
+			Case 6:
+				nomMes = "Junio"
+			Case 7:
+				nomMes = "Julio"
+			Case 8:
+				nomMes = "Agosto"
+			Case 9:
+				nomMes = "Septiembre"
+			Case 10:
+				nomMes = "Octubre"
+			Case 11:
+				nomMes = "Noviembre"
+			Case 12:
+				nomMes = "Diciembre"
+		End Select
+		getNombreMes = nomMes		
+	End Function
+	
+	Function getNombreDia (numDia As Integer)
+		Dim nomDia As String 
+		Select Case numDia
+			Case 1:
+				nomDia = "Domingo"
+			Case 2:
+				nomDia = "Lunes"
+			Case 3:
+				nomDia = "Martes"
+			Case 4:
+				nomDia = "Miércoles"
+			Case 5:
+				nomDia = "Jueves"
+			Case 6:
+				nomDia = "Viernes"
+			Case 7:
+				nomDia = "Sábado"
+		End Select
+		
+		getNombreDia = nomDia		
+	End Function
+	
+	Public Function getDatosSede(sede As String) As String
+		Dim areas As String 
+		Dim categorias As String 
+		Dim roles As String 
+		
+		areas = getLista("vwProgAreasSede", sede, "areas")
+		roles = getRoles(sede)
+		
+		getDatosSede = areas + ", " + roles
+	End Function
+	
+	Public Function getDatosArea(form As String, sede As String, area As String) As String
+		Dim peqs As String 
+		
+		If form = "frPEQ" Then
+			peqs = getLista("vwProgPEQAreasSede", sede+area, "peqs")
+		Else
+			peqs = getPEQ(sede+area)
+		End If  
+		
+		getDatosArea = peqs 
+	End Function
+	
+	Public Function getDatosPEQ(form As String, sede As String, area As String, uniquePEQ As String, peq As String) As String 
+		Dim integrantes As String 
+		Dim estructura As String 
+		
+		If form <> "frPEQ" Then  
+			integrantes = getIntegrantes(uniquePEQ) + |, |
+		End If
+		estructura = getEstructura(sede, area, peq)
+		
+		getDatosPEQ = integrantes + estructura		
+	End Function
+	
+	Public Function getRoles (sede As String) As String
+		Dim dbConexion As NotesDatabase
+		Dim vwCfg As NotesView
+		Dim vwSedes As NotesView
+		Dim ndCfg As NotesDocument
+		Dim ndSede As NotesDocument
+		Dim roles As String 
+		Dim separador As String 
+		Dim claves(1) As String 
+		
+		%REM		
+		roles = |"roles":[|
+		
+		Set vwCfg = db.Getview("vwProgTodos")
+		Set ndCfg = vwCfg.Getdocumentbykey("frGeneral", True)
+		Set dbConexion = New NotesDatabase("", ndCfg.rutaConexion(0))
+		If ndCfg.rutaConexion(0) <> "" And dbConexion.Isopen Then
+			Set vwSedes = dbConexion.Getview("dnvwConfiguracionSedePlanta")
+			claves(0) = ndCfg.programa(0)
+			claves(1) = sede
+			Set ndSede = vwSedes.Getdocumentbykey(claves, True)
+			If Not ndSede Is Nothing Then
+				roles = getValores(roles, ndSede.dnfdRoles)
+			End If
+		End if		
+		roles = roles + "]"
+		%END REM
+		
+		Set vwSedes = db.Getview("vwProgSedes")
+		Set ndSede = vwSedes.Getdocumentbykey(sede, True)
+		
+		roles = |"roles":[|
+		If Not ndSede Is Nothing Then 
+			roles = getValores(roles, ndSede.roles)
+		End If		
+		roles = roles + "]"
+		
+		getRoles = roles
+	End Function
+	
+	Function getReconocimientos(categoria As String, nomLista As String) As String
+		Dim vwReconocimientos As NotesView
+		Dim vec As NotesViewEntryCollection
+		Dim ve As NotesViewEntry
+		Dim nd As NotesDocument
+		Dim reconocimientos As String 
+		Dim separador As String 
+		
+		Set vwReconocimientos = db.Getview("vwProgCfgReconocimientos")
+		
+		reconocimientos = |"|+nomLista+|":[|
+		separador = ""
+		Set vec = vwReconocimientos.Getallentriesbykey(categoria, True)
+		Set ve = vec.Getfirstentry()
+		While Not ve Is Nothing
+			Set nd = ve.Document
+			reconocimientos = reconocimientos + (separador + |{"valor":"| + nd.nombre(0) + |"}|) 
+			separador = ","
+			Set ve = vec.Getnextentry(ve)			
+		Wend
+		reconocimientos = reconocimientos + |]|
+		
+		getReconocimientos = reconocimientos
+	End Function
+	
+	Function getIntegrantes(uniquePEQ As String) As String 
+		Dim vwUniques As NotesView
+		Dim vwIntegrantes As NotesView
+		Dim ndPEQ As NotesDocument
+		Dim ndIntegrante As NotesDocument
+		Dim vec As NotesViewEntryCollection
+		Dim ve As NotesViewEntry
+		Dim estructura As String 
+		Dim integrantes As String 
+		Dim separador As String 
+		Dim claves(1) As String 
+		Dim area As String 
+		Dim peq As String 
+		
+		integrantes = |"integrantes":[|
+		area = ""
+		peq = ""
+		
+		Set vwUniques = db.Getview("vwProgUniques")
+		Set vwIntegrantes = db.Getview("vwProgIntegrantes")
+		Set vec = vwIntegrantes.getallentriesbykey(uniquePEQ, True)
+		If Not vec Is Nothing Then
+			Set ve = vec.getfirstentry
+			While Not ve Is Nothing 
+				Set ndIntegrante = ve.document
+				integrantes = integrantes + (separador + |{"valor":"| + ndIntegrante.nombre(0) + |"}|) 
+				separador = ","
+				Set ve = vec.getnextentry(ve)
+			Wend
+			Set ndPEQ = vwUniques.Getdocumentbykey(uniquePEQ, True)
+			If Not ndPEQ Is Nothing Then 
+				area = ndPEQ.area(0)
+				peq = ndPEQ.nombre(0)
+			End If
+		End If
+		integrantes = integrantes + "]"	
+		
+		getIntegrantes = integrantes
+	End Function
+	
+	Function getEstructura(sede As String, area As String, peq As String) As String
+		Dim vwCfg As NotesView
+		Dim vwAreas As NotesView
+		Dim vwItems As NotesView
+		Dim vwUniques As NotesView 
+		Dim nd As NotesDocument
+		Dim ndCfg As NotesDocument
+		Dim estructura As String 
+		Dim separador As String 
+		Dim claves(1) As String 
+		Dim niveles As String 
+		Dim unique As String 
+		
+		estructura = |"estructura":[|
+		Set vwCfg = db.Getview("vwProgTodos")
+		Set ndCfg = vwCfg.Getdocumentbykey("frGeneral", True)
+		Set vwAreas = db.Getview("vwProgAreasSede")
+		Set vwItems = db.Getview("vwProgItemsEstructura")
+		Set vwUniques = db.Getview("vwProgUniques")
+		claves(0) = sede
+		claves(1) = area
+		Set nd = vwAreas.Getdocumentbykey(claves, True)
+		If Not nd Is Nothing Then
+			niveles = getNiveles(vwItems, nd.unique(0), peq, False)
+			If niveles <> "" Then 
+				unique = getUniquePadrePEQ(vwItems, nd.unique(0), peq)
+				niveles = getAncestros(vwUniques, unique, niveles)
+			End If
+			estructura = estructura + niveles
+		End If
+		estructura = estructura + "]"
+		getEstructura = estructura 
+	End Function
+	
+	Function getNiveles(vwItems As NotesView, unique As String, peq As String, incluir As Boolean) As String
+		Dim vec As NotesViewEntryCollection
+		Dim ve As NotesViewEntry
+		Dim ndItem As NotesDocument
+		Dim niveles As String 
+		Dim separador As String
+		Dim clase As String 
+		
+		niveles = ""
+		separador = ""
+		
+		Set vec = vwItems.GetAllEntriesByKey(unique, True)
+		If Not vec Is Nothing Then
+			Set ve = vec.GetFirstEntry
+			While Not ve Is Nothing 
+				Set ndItem = ve.Document
+				If (ndItem.nombre(0) = peq And ndItem.esPEQ(0) = "Si") Or incluir Then
+					If Not incluir Then 
+						clase = "class=bold"
+					End If
+					niveles = niveles + (separador + |{"nombre":"|+ndItem.nombre(0)+|", "clase":"|+clase+|", "hijos":[|+getNiveles(vwItems, ndItem.unique(0), peq, True)+|], "nivel":true}|)
+					separador = ","
+				Else
+					niveles = niveles + getNiveles(vwItems, ndItem.unique(0), peq, False)
+				End If
+				Set ve = vec.GetNextEntry(ve)
+			Wend
+		End If
+		getNiveles = niveles
+	End Function
+	
+	Function getUniquePadrePEQ(vwItems As NotesView, uniqueItem As String, peq As String) As String 
+		Dim vec As NotesViewEntryCollection
+		Dim ve As NotesViewEntry
+		Dim ndItem As NotesDocument
+		Dim unique As String 
+		
+		unique = ""
+		
+		Set vec = vwItems.GetAllEntriesByKey(uniqueItem, True)
+		If Not vec Is Nothing Then
+			Set ve = vec.GetFirstEntry
+			While Not ve Is Nothing And unique = ""
+				Set ndItem = ve.Document
+				If ndItem.nombre(0) = peq Then
+					unique = ndItem.uniquePadre(0)
+				Else
+					unique = getUniquePadrePEQ(vwItems, ndItem.unique(0), peq)
+				End If
+				Set ve = vec.GetNextEntry(ve)
+			Wend
+		End If
+		getUniquePadrePEQ = unique
+	End Function
+	
+	Function getAncestros(vwUniques As NotesView, unique As String, niveles As String) As String 
+		Dim ndItem As NotesDocument
+		Set ndItem = vwUniques.Getdocumentbykey(unique, True)
+		If Not ndItem Is Nothing Then 
+			If ndItem.form(0) = "frItemEstructura" Then 
+				niveles = |{"nombre":"|+ndItem.nombre(0)+|", "clase":"", "hijos":[|+niveles+|]}|
+			End If
+			niveles = getAncestros(vwUniques, ndItem.uniquePadre(0), niveles)
+		End If
+		getAncestros = niveles
+	End Function
+	
+	Function getLista(vista As String, clave As String, nomLista As String) As String 
+		Dim vwCfg As NotesView
+		Dim vw As NotesView
+		Dim vec As NotesViewEntryCollection
+		Dim ve As NotesViewEntry
+		Dim ndCfg As NotesDocument
+		Dim nd As NotesDocument
+		Dim separador As String 
+		Dim lista As String 
+		
+		lista = |"|+nomLista+|":[|
+		separador = ""
+		
+		Set vwCfg = db.Getview("vwProgTodos")
+		Set ndCfg = vwCfg.Getdocumentbykey("frGeneral", True)
+		Set vw = db.Getview(vista)
+		Set vec = vw.Getallentriesbykey(clave, True)
+		If Not vec Is Nothing Then
+			Set ve = vec.Getfirstentry()
+			While Not ve Is Nothing
+				Set nd = ve.Document
+				lista = lista + (separador + |{"valor":"| + nd.nombre(0) + |"}|) 
+				separador = ","
+				Set ve = vec.Getnextentry(ve)			
+			Wend		
+		End If
+		
+		lista = lista + "]"
+		getLista = lista
+	End Function
+	
+	Function getPEQ(clave As String) As String
+		Dim vwPEQ As NotesView
+		Dim ndPEQ As NotesDocument
+		Dim vec As NotesViewEntryCollection
+		Dim ve As NotesViewEntry
+		Dim separador As String 
+		Dim peqs As String 
+		
+		peqs = |"peqs":[|
+		separador = ""
+		
+		Set vwPEQ = db.Getview("vwProgPEQ")		
+		Set vec = vwPEQ.Getallentriesbykey(clave, True)		
+		If Not vec Is Nothing Then 
+			Set ve = vec.Getfirstentry()
+			While Not ve Is Nothing
+				Set ndPEQ = ve.Document
+				peqs = peqs + (separador + |{"nombre":"| + ndPEQ.nombre(0) + |", "valor":"| + ndPEQ.unique(0) + |"}|)
+				separador = ","
+				Set ve = vec.Getnextentry(ve)
+			Wend
+		End If
+		
+		peqs = peqs + |]|	
+		getPEQ = peqs
+	End Function
+	
+	Function getAnexos(unique As String) As String
+		Dim vwAnexos As NotesView
+		Dim nav1 As NotesViewNavigator
+		Dim nav2 As NotesViewNavigator
+		Dim ve1 As NotesViewEntry
+		Dim ve2 As NotesViewEntry
+		Dim ndAnexo As NotesDocument
+		Dim anexos As String 
+		Dim separador As String
+		Dim separadorArchivos As String  
+		Dim macro As Variant
+		Dim webDbName As Variant
+		Dim archivos As String 
+		Dim clase As String
+		
+		anexos = |"anexos":[|
+		Set vwAnexos = db.Getview("vwProgAnexosCategorizados")
+		Set nav1 = vwAnexos.Createviewnavfromcategory(unique)
+		Set ve1 = nav1.Getfirst()
+		While Not ve1 Is Nothing
+			If ve1.Iscategory Then
+				separadorArchivos = ""
+				archivos = |[|
+				Set nav2 = vwAnexos.Createviewnavfromchildren(ve1)
+				Set ve2 = nav2.Getfirst()
+				While Not ve2 Is Nothing 
+					Set ndAnexo = ve2.Document
+					clase = "imagenNormal"
+					If ndAnexo.seccion(0) = "ANT" Or ndAnexo.seccion(0) = "DES" Then
+						clase = "imagenAntesDespues"
+					End If  
+					macro = Evaluate(|@URLEncode("Domino";"|+ndAnexo.archivo(0)+|")|)
+					archivos = archivos + (separadorArchivos + |{"unid":"| + ndAnexo.Universalid + |", "unique":"| + ndAnexo.unique(0) + |", "archivo":"| + macro(0) + |", "nombre":"| + ndAnexo.nombre(0) + |", "clase":"| + clase + |"}|)
+					separadorArchivos = ","
+					Set ve2 = nav2.Getnext(ve2)
+				Wend
+				archivos = archivos + |]|
+				anexos = anexos + (separador + |{"seccion":"|+ve1.columnvalues(1)+|", "archivos":|+archivos+|}|)
+				separador = ","
+			End If 
+			Set ve1 = nav1.Getnextcategory(ve1)
+		Wend
+		anexos = anexos + |]|
+		getAnexos = anexos
+	End Function
+	
+	Function getAnexosTabla(unique As String) As String
+		Dim vwAnexos As NotesView
+		Dim dc As NotesDocumentCollection
+		Dim ndAnexo As NotesDocument
+		Dim anexos As String 
+		Dim separador As String 
+		Dim macro As Variant
+		Dim webDbName As Variant
+		anexos = "["
+		Set vwAnexos = db.Getview("vwProgAnexos")
+		Set dc = vwAnexos.getalldocumentsbykey(unique, True)
+		If Not dc Is Nothing Then
+			Set ndAnexo = dc.Getfirstdocument()
+			While Not ndAnexo Is Nothing 
+				macro = Evaluate(|@URLEncode("Domino";"|+ndAnexo.archivo(0)+|")|)
+				anexos = anexos + (separador + |{"unid":"| + ndAnexo.Universalid + |", "unique":"| + ndAnexo.unique(0) + |", "archivo":"| + macro(0) + |", "nombre":"| + ndAnexo.nombre(0) + |", "eliminar":true}|)
+				separador = ","
+				Set ndAnexo = dc.Getnextdocument(ndAnexo)
+			Wend
+		End If
+		anexos = anexos + "]"
+		getAnexosTabla = anexos
+	End Function
+	
+	Function getPasos As String
+		Dim vwCfg As NotesView
+		Dim ndCfg As NotesDocument
+		Dim separador As String 
+		Dim pasosMA As String 
+		Dim pasosMP As String 
+		Dim pasosEA As String 
+		
+		pasosMA = |"MA":[|
+		pasosMP = |"MP":[|
+		pasosEA = |"EA":[|
+		
+		Set vwCfg = db.Getview("vwProgTodos")
+		Set ndCfg = vwCfg.Getdocumentbykey("frGeneral", True)
+		pasosMA = getValores(pasosMA, ndCfg.pasosMA)
+		pasosMP = getValores(pasosMP, ndCfg.pasosMP)
+		pasosEA = getValores(pasosEA, ndCfg.pasosEA)
+		
+		pasosMA = pasosMA + |]|
+		pasosMP = pasosMP + |]|
+		pasosEA = pasosEA + |]|
+		getPasos = |"pasos":{| + pasosMA + |, | + pasosMP + |, | + pasosEA + |}|
+	End Function
+	
+	Function getValores(cadena As String, campo As Variant) As String
+		Dim separador As String 
+		separador = ""
+		If campo(0) <> "" Then 
+			ForAll x In campo
+				cadena = cadena + (separador + |{"valor":"|+x+|"}|)	
+				separador = ","
+			End ForAll
+		End If
+		getValores = cadena
+	End Function
+	
+	Function getAyudas(form As String) As String 
+		Dim vwCfg As NotesView
+		Dim ndCfg As NotesDocument
+		Dim ayudas As String 
+		Dim separador As String 
+		Dim formulario As String 
+		
+		ayudas = |"ayudas":[|
+		
+		formulario = "frAdmon" + StrRight(form, "fr")
+		Set vwCfg = db.Getview("vwProgTodos")
+		Set ndCfg = vwCfg.Getdocumentbykey(formulario, True)
+		If Not ndCfg Is Nothing Then			 
+			ForAll item In ndCfg.Items
+				If InStr(item.Name, "maestro") = 0 And  InStr(item.Name, "aplica") = 0 And item.values(0) <> "" Then 
+					ayudas = ayudas + (separador + |{"campo":"|+item.name+|", "ayuda":["|+Join(item.values,|","|)+|"]}|)
+					separador = ","
+				End If
+			End ForAll
+		End If
+		
+		ayudas = ayudas + |]| 
+		getAyudas = ayudas
+	End Function
+	
+	Function getLabels(form As String) As String 
+		On Error GoTo label
+		Dim vwCfg As NotesView
+		Dim ndCfg As NotesDocument
+		Dim labels As String 
+		Dim separador As String 
+		Dim formulario As String 
+		
+		labels = |"labels":[|
+		
+		formulario = "frAdmon" + StrRight(form, "fr")
+		Set vwCfg = db.Getview("vwProgTodos")
+		Set ndCfg = vwCfg.Getdocumentbykey(formulario, True)
+		
+		If Not ndCfg Is Nothing Then			 
+			ForAll item In ndCfg.Items	
+				If InStr(item.Name, "label") <> 0 AND item.values(0) <> "" Then 
+					labels = labels + (separador + |{"campo":"|+item.name+|", "valor":["|+Join(item.values,|","|)+|"]}|)
+					separador = ","
+				End If
+			End ForAll
+		End If
+		
+		labels = labels + |]| 
+		getLabels = labels
+		
+		Exit Function 
+label:
+		MsgBox"Error en getLabels: " & "(" & Erl & ")" & Error$ 
+	End Function
+	
+	Function mostrarCampos(form As String, tipoHerramienta As String) As String 
+		On Error GoTo label
+		
+		Dim vwCfg As NotesView
+		Dim ndCfg As NotesDocument
+		Dim fields As String 
+		Dim separador As String 
+		Dim formulario As String 
+		Dim campo As String
+		Dim valor As Variant
+		Dim requerido As Variant
+		Dim maestro As Variant
+		
+		fields = |"fields":[|
+		
+		formulario = "frAdmon" + StrRight(form, "fr")
+		Set vwCfg = db.Getview("vwProgTodos")
+		Set ndCfg = vwCfg.Getdocumentbykey(formulario, True)
+		
+		If Not ndCfg Is Nothing Then
+			ForAll item In ndCfg.Items
+				campo = ""
+				valor = ""
+				requerido = ""
+				maestro = "" 					
+				If InStr(item.Name, "aplica") <> 0 And item.values(0) = "Si"  Then				
+					campo = LCase(Replace(item.Name, "aplica", ""))
+					If campo <> "accionesnumero" And campo <> "accionestipoaccion" And campo <> "accionesresponsableestado" And campo <> "accionesresponsableaccion" And campo <> "accionesfeimplmentacion" And campo <> "accionesestado" Then 
+						valor = ndCfg.Getitemvalue("tipoHerra"+campo)
+						requerido = ndCfg.Getitemvalue("requerido"+campo)
+						maestro = ndCfg.Getitemvalue("maestro"+campo)
+						
+						'If valor(0) = tipoHerramienta Then
+						If ndCfg.getFirstItem("tipoHerra"+campo).Contains(tipoHerramienta) Then
+							If requerido(0) = "Si" Then							 
+								fields = fields + (separador + |{"campo":"|+campo+|", "Show":["Si"], "requerido":"Si"}|)							 							
+							Else
+								fields = fields + (separador + |{"campo":"|+campo+|", "Show":["Si"], "requerido":"No"}|)
+							End If 					
+							separador = ","	
+						End If
+					End If 
+				End If
+			End ForAll
+		End If
+		
+		fields = fields + |]| 
+		mostrarCampos = fields
+		
+		Exit Function 
+label:
+		MsgBox"Error en mostrarCampos: " & "(" & Erl & ")" & Error$ 
+	End Function  
+	
+	Function showValidateFields(form As String) As String 
+		On Error GoTo label
+		
+		Dim vwCfg As NotesView
+		Dim ndCfg As NotesDocument
+		Dim fields As String 
+		Dim separador As String 
+		Dim formulario As String 
+		Dim campo As String
+		Dim aplica As Variant
+		Dim requerido As Variant		
+		
+		fields = |"fields":[|
+		
+		formulario = "frAdmon" + StrRight(form, "fr")
+		Set vwCfg = db.Getview("vwProgTodos")
+		Set ndCfg = vwCfg.Getdocumentbykey(formulario, True)
+		
+		If Not ndCfg Is Nothing Then
+			ForAll item In ndCfg.Items
+				campo = ""
+				aplica = ""
+				requerido = ""								
+				If InStr(item.Name, "label") Then							
+					campo = LCase(Replace(item.Name, "label", ""))
+					aplica = ndCfg.Getitemvalue("aplica"+campo)									
+					requerido = ndCfg.Getitemvalue("requerido"+campo)					
+					
+					If aplica(0) <> "" And aplica(0) = "Si" Then 
+						fields = fields + (separador + |{"campo":"|+campo+|", "Show":"|+aplica(0)+|", "requerido":"|+requerido(0)+|"}|)
+						separador = ","	
+					End If		
+					
+				End If
+			End ForAll
+		End If
+		
+		fields = fields + |]| 
+		showValidateFields = fields
+		
+		Exit Function 
+label:
+		MsgBox"Error en showValidateFields: " & "(" & Erl & ")" & Error$ 
+	End Function 
+	
+	Function limpiarTexto(cadena As String) As String 
+		cadena = Replace(cadena, |"|,|'|)
+		cadena = Replace(cadena, |“|,|'|)
+		cadena = Replace(cadena, |”|,|'|)
+		cadena = Replace(cadena, UChr(9),"")
+		cadena = Replace(cadena, UChr(10),"")
+		cadena = Replace(cadena, UChr(11),"")
+		cadena = Replace(cadena, UChr(12),"")
+		cadena = Replace(cadena, UChr(13),"")
+		limpiarTexto = cadena
+	End Function
+	
+	Function formatoTexto(cadena As String) As String
+		cadena = Replace(cadena, "##empty##", "xxxx")
+		cadena = Replace(cadena, "##ampersand##", "&")
+		cadena = Replace(cadena, "##percent##", "%")
+		cadena = Replace(cadena, "##arroba##", "@")
+		formatoTexto = cadena
+	End Function
+	
+	Function getPersonasFlujo(ndPrincipal As NotesDocument, campo As String) As Variant
+		Dim ns as New NotesSession
+		Dim db As NotesDatabase
+		Dim vwCfg As NotesView
+		Dim vwUniques As NotesView
+		Dim ndCfg As NotesDocument
+		
+		Set db = ns.CurrentDatabase
+		Set vwCfg = db.GetView("vwProgTodos")
+		Set ndCfg = vwCfg.GetDocumentByKey("frGeneral", True)
+		Set vwUniques = db.GetView("vwProgUniques")
+		
+		Dim personas As Variant 
+		Select Case campo
+			Case "autor":
+				personas = ndPrincipal.autor
+			Case "responsable":
+				personas = ndPrincipal.responsable
+			Case "responsablesPEQ":
+				If ndPrincipal.form(0) = "frPEQ" Then 
+					personas = ndPrincipal.responsables
+				Else
+					Dim ndPEQ As NotesDocument
+					Set ndPEQ = vwUniques.Getdocumentbykey(ndPrincipal.uniquePEQ(0), True)
+					If Not ndPEQ Is Nothing Then 
+						personas = ndPEQ.responsables
+					Else
+						personas = ""
+					End If
+				End If
+			Case "responsableReplica":
+				personas = ndPrincipal.responsableReplica
+			Case Else
+				personas = ""
+		End Select
+		getPersonasFlujo = personas
+	End Function 
+	
+	Function getPersonaHistorico(ndPrincipal As NotesDocument, ndEstado As NotesDocument, ndContext As NotesDocument) As Variant
+		On Error GoTo label
+		
+		Dim ns As New NotesSession
+		Dim db As NotesDatabase
+		Dim vwCfg As NotesView
+		Dim vwUniques As NotesView
+		Dim vwHistoricos As NotesView
+		Dim ndCfg As NotesDocument
+		Dim ndHistorico As NotesDocument
+		Dim dcHistoricos As NotesDocumentCollection
+		Dim registros As Integer
+		Dim formula As String
+		Dim estadoDestino As String
+		Dim vecHistorial As NotesViewEntryCollection
+		Dim veHistorial As NotesViewEntry
+		
+		Set db = ns.CurrentDatabase
+		Set vwCfg = db.GetView("vwProgTodos")
+		Set ndCfg = vwCfg.GetDocumentByKey("frGeneral", True)
+		Set vwUniques = db.GetView("vwProgUniques")
+		Set vwHistoricos = db.Getview("vwProgHistoricoFechaCreacion")
+		
+		If ndContext.Hasitem("estadoDestino") Then 
+			estadoDestino = ndContext.estadoDestino(0)
+		Else
+			estadoDestino = ndContext.destino(0)
+		End If
+		
+		Dim personas As String	
+		personas= ""
+		
+		Set vecHistorial = vwHistoricos.getAllEntriesByKey(ndPrincipal.unique(0), True)
+		
+		If vecHistorial.Count() > 0 Then
+			Set veHistorial = vecHistorial.getFirstEntry()			
+			Set ndHistorico = veHistorial.Document
+			personas = ndHistorico.responsableOrigen(0)
+		End If
+		
+		getPersonaHistorico = personas
+		
+		Exit Function 
+label:
+		MsgBox "Error en getPersonaHistorico: " & "(" & Erl & ")" & Error$ 
+	End Function
+	
+	Sub setDescendientesMenu(unique As String, codigo As String,sede As String, area As String)
+		Dim vwItems As NotesView
+		Dim dc As NotesDocumentCollection
+		Dim ndItem As NotesDocument
+		Dim posicion As Variant 
+		Dim cias As Variant  
+		Dim nomCias As Variant
+		Dim areaAux As String
+		Dim sedeAux As String
+		Dim codigoAux As String    
+		Dim i As Integer 
+		
+		Set vwItems = db.GetView("vwProgItemsEstructura")
+		Set dc = vwItems.GetAllDocumentsByKey(unique, True)
+		Set ndItem = dc.GetFirstDocument
+		areaAux = area
+		sedeAux = sede
+		codigoAux = codigo
+		While Not ndItem Is Nothing
+			Select Case ndItem.codigo(0)
+			Case "area":
+				If codigoAux = "sede" Then 
+					ndItem.sede = sedeAux	
+				End If
+				areaAux = ndItem.area(0)
+				sedeAux = ndItem.sede(0)
+			Case "nivel":
+				ndItem.sede = sedeAux
+				ndItem.area = areaAux
+		End Select
+			Call ndItem.save(True, False)
+			Call setDescendientesMenu(ndItem.unique(0), ndItem.codigo(0) ,sedeAux , areaAux)
+			Set ndItem = dc.GetNextDocument(ndItem)
+		Wend
+	End Sub
+	
+	Public Function generarConsecutivo(sede As String, plantilla As String, ndPrincipal As NotesDocument) As String
+		Dim ndConsecutivo As NotesDocument
+		Dim vwConsecutivos As NotesView
+		Dim consecutivo As Long
+		Dim consecutivoPadre As String
+		Dim claves(1) As String
+		Dim anio As String
+		
+		anio = Format(Now, "yyyy")
+		
+		If plantilla = "frAccion" Then		
+			sede = getSedePadre(ndPrincipal.UNIQUEPADRETPM(0))				
+		End If
+		
+		claves(0) = sede		
+		claves(1) = plantilla
+		Set vwConsecutivos = db.GetView("vwProgConsecutivos")
+		Set ndConsecutivo = vwConsecutivos.GetDocumentByKey(claves, True)
+		If plantilla = "frRegistroCapacitacion" Then 
+			Set vwConsecutivos = db.GetView("vwProgConsecutivosPlantilla")
+			Set ndConsecutivo = vwConsecutivos.GetDocumentByKey(claves(1), True)
+		End If		
+		If Not ndConsecutivo Is Nothing Then
+			If plantilla = "frRegistroCapacitacion" Then
+				If ndConsecutivo.anio(0) = anio Then
+					consecutivo = ndConsecutivo.consecutivo(0) + 1
+					ndConsecutivo.consecutivo = consecutivo
+				Else
+					ndConsecutivo.consecutivo = 1
+					ndConsecutivo.anio = anio
+				End If					
+			Else
+				consecutivo = ndConsecutivo.consecutivo(0) + 1
+				ndConsecutivo.consecutivo = consecutivo				
+			End If			
+		Else			
+			Set ndConsecutivo = New NotesDocument(db)
+			ndConsecutivo.form = "frConsecutivo"
+			ndConsecutivo.consecutivo = 1			 
+			ndConsecutivo.sede = sede
+			ndConsecutivo.plantilla = plantilla
+			Dim item As New NotesItem(ndConsecutivo, "editor", "*", AUTHORS)
+			If plantilla = "frRegistroCapacitacion" Then				
+				ndConsecutivo.anio = anio	
+			End If
+		End If
+		
+		If ndConsecutivo.Save(False, False) Then
+			If plantilla = "frAccion" Then								
+				consecutivoPadre = getConsecutivoPadre(ndPrincipal.UNIQUEPADRETPM(0))				
+				If consecutivoPadre <> "" Then 
+					generarConsecutivo = consecutivoPadre & "-" & CStr(ndConsecutivo.consecutivo(0))
+				Else
+					generarConsecutivo = CStr(ndConsecutivo.consecutivo(0))					
+				End If
+				
+			ElseIf plantilla = "frRegistroCapacitacion" Then 
+				Dim cifra As String 
+				cifra = "0000"+CStr(ndConsecutivo.consecutivo(0))
+				cifra = Right$(cifra, 4)
+				generarConsecutivo = CStr(Year(Now))+cifra
+			Else
+				generarConsecutivo = CStr(ndConsecutivo.consecutivo(0))	
+			End If
+			
+		Else
+			generarConsecutivo = ""
+		End If
+	End Function
+	
+	Public Function getConsecutivoPadre(uniquePadre As String) As String
+		Dim ndDoc As NotesDocument
+		Dim ndHAN As NotesDocument
+		Dim vwUniques As NotesView
+		Dim consecutivo As String
+		
+		consecutivo = ""
+		
+		Set vwUniques = db.GetView("vwProgUniques")
+		Set ndDoc = vwUniques.GetDocumentByKey(uniquePadre, True)
+		If Not ndDoc Is Nothing Then
+			If ndDoc.form(0) = "frHAN" Then
+				consecutivo = ndDoc.consecutivo(0)  
+			Else
+				Set ndHAN = vwUniques.Getdocumentbykey(ndDoc.UNIQUEPADRE(0), True)
+				If Not ndHAN Is Nothing Then 
+					consecutivo = ndHAN.consecutivo(0)	
+				End If				
+			End If
+		End If
+		
+		getConsecutivoPadre = consecutivo
+		
+		
+	End Function
+	
+	Public Function getSedePadre(uniquePadre As String) As String
+		Dim ndDoc As NotesDocument
+		Dim ndHAN As NotesDocument
+		Dim vwUniques As NotesView
+		Dim sede As String
+		
+		sede = ""
+		
+		Set vwUniques = db.GetView("vwProgUniques")
+		Set ndDoc = vwUniques.GetDocumentByKey(uniquePadre, True)
+		If Not ndDoc Is Nothing Then
+			MsgBox "ndDoc.form(0) = "& ndDoc.form(0) 
+			If ndDoc.form(0) = "frHAN" Then				
+				sede = ndDoc.sede(0)  
+			Else				
+				Set ndHAN = vwUniques.Getdocumentbykey(ndDoc.UNIQUEPADRE(0), True)
+				If Not ndHAN Is Nothing Then 
+					sede = ndHAN.sede(0)	
+				End If				
+			End If
+		End If
+		
+		getSedePadre = sede		
+		
+	End Function
+	
+	Function getResponsablesGrupo(grupos As Variant) As Variant 
+		Dim vwGrupo As NotesView 
+		Dim ndGrupo As NotesDocument
+		Dim ndAux As NotesDocument 
+		Dim personas As Variant
+		Dim item As NotesItem 
+		
+		Set ndAux = New NotesDocument(db)
+		Set item = New NotesItem(ndAux, "responsables", "")
+		Set vwGrupo = db.Getview("vwProgGrupoResponsables")
+		ForAll grupo In grupos
+			Set ndGrupo = vwGrupo.Getdocumentbykey(grupo, True)
+			If Not ndGrupo Is Nothing Then 
+				ForAll responsable In ndGrupo.responsables
+					item.Appendtotextlist(responsable)
+				End ForAll
+			End If
+		End ForAll
+		 
+		getResponsablesGrupo = ArrayUnique(FullTrim(ndAux.responsables))
+	End Function
+	
+End Class

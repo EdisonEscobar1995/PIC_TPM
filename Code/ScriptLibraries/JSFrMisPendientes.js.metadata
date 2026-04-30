@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><note xmlns="http://www.lotus.com/dxl" class="filter" maintenanceversion="2.0" replicaid="0525804E00673626" version="12.0">
+<noteinfo noteid="301672" sequence="54" unid="1B2B5729F06EE4AF052585AD005032E7">
+<created><datetime>20200722T093559,11-05</datetime></created>
+<modified><datetime>20250605T010513,14-05</datetime></modified>
+<revised><datetime>20250604T101928,29-05</datetime></revised>
+<lastaccessed><datetime>20250605T010513,13-05</datetime></lastaccessed>
+<addedtofile><datetime>20200924T094358,38-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name="$TITLE" sign="true"><text>JSFrMisPendientes</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+<item name="$POID"><datetime>20250604T101928,29-05</datetime></item></note>

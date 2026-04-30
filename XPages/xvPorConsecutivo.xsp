@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	
+	<xp:this.resources>
+		<xp:script src="ssCommon" clientSide="false"></xp:script>
+	</xp:this.resources>
+
+	<xp:this.data>
+		<xp:dominoView var="view1" viewName="vwPorConsecutivo"
+			expandLevel="1">
+			<xp:this.search><![CDATA[#{javascript:viewScope.get("clave")}]]></xp:this.search>
+		</xp:dominoView>
+	</xp:this.data>
+	
+	<xp:this.afterPageLoad><![CDATA[#{javascript:SolucionesAdmonLog()}]]></xp:this.afterPageLoad>
+
+	<xc:ccLayout>
+		<xp:this.facets>
+			<xp:panel xp:key="facet_1">
+				<xc:ccLayoutVista newPage=""
+					viewPanel="vista" categorized="true" pager="true"
+					title="Por consecutivo" create="true">
+					<xp:this.facets>
+						<xp:viewPanel xp:key="facet_1"
+							rows="#{javascript:sessionScope.rows}" value="#{view1}"
+							id="vista" viewStyle="width:100%" var="fila"
+							dataTableStyleClass="mainTable table table-bordered table-colored table-striped">
+							<xp:viewColumn columnName="sede1"
+								id="viewColumn2">
+								<xp:this.facets>
+									<xp:viewColumnHeader
+										value="Sede" xp:key="header" id="viewColumnHeader2">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="keyForm"
+								id="viewColumn4">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Plantilla"
+										xp:key="header" id="viewColumnHeader4">
+									</xp:viewColumnHeader>									
+								</xp:this.facets>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="consecutivo"
+								id="viewColumn5" contentType="html">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Consecutivo"
+										xp:key="header" id="viewColumnHeader5">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+								<xp:this.value><![CDATA[#{javascript:fila.getUniversalID() ? "<a href='0/"+fila.getUniversalID()+"'>"+fila.getColumnValue("consecutivo")+"</a>" : ""}]]></xp:this.value>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="titulo"
+								id="viewColumn6">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Título"
+										xp:key="header" id="viewColumnHeader6">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="autor"
+								id="viewColumn8">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Autor"
+										xp:key="header" id="viewColumnHeader8">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+								<xp:this.converter>
+									<xp:customConverter>
+										<xp:this.getAsObject><![CDATA[#{javascript:@Name("[Canonicalize]",value);}]]></xp:this.getAsObject>
+										<xp:this.getAsString><![CDATA[#{javascript:@Name("[CN]",value);}]]></xp:this.getAsString>
+									</xp:customConverter>
+								</xp:this.converter>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="Fechacreacion"
+								id="viewColumn9" styleClass="col-md-1">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Fecha creación (d/m/a)"
+										xp:key="header" id="viewColumnHeader9">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+							</xp:viewColumn>
+							<xp:viewColumn columnName="estado"
+								id="viewColumn10">
+								<xp:this.facets>
+									<xp:viewColumnHeader value="Estado"
+										xp:key="header" id="viewColumnHeader10">
+									</xp:viewColumnHeader>
+								</xp:this.facets>
+							</xp:viewColumn>				
+						</xp:viewPanel>
+					</xp:this.facets>
+				</xc:ccLayoutVista>
+			</xp:panel>
+		</xp:this.facets>
+	</xc:ccLayout>
+</xp:view>

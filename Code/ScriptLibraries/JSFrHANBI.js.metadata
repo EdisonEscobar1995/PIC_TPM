@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><note xmlns="http://www.lotus.com/dxl" class="filter" maintenanceversion="2.0" replicaid="0525804E00673626" version="12.0">
+<noteinfo noteid="3f84ba" sequence="40" unid="F563D9B0FE8D056D05258D800006127D">
+<created><datetime>20260114T200619,49-05</datetime></created>
+<modified><datetime>20260208T021538,12-05</datetime></modified>
+<revised><datetime>20260208T021538,11-05</datetime></revised>
+<lastaccessed><datetime>20260208T021538,11-05</datetime></lastaccessed>
+<addedtofile><datetime>20260114T200619,54-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name="$POID"><datetime>20250604T101928,22-05</datetime></item>
+<item name="$TITLE" sign="true"><text>JSFrHANBI</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+</note>

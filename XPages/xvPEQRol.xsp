@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		<xp:dominoView var="vwIntegrantesRol"
+			viewName="vwIntegrantesRol">
+		</xp:dominoView>
+	</xp:this.data>
+	
+	<xc:ccLayout>
+	<xp:this.facets>
+	<xp:span id="label1" xp:key="facet_1">Roles</xp:span>
+	<xp:viewPanel rows="3" id="viewPanel1" xp:key="facet_2" value="#{vwIntegrantesRol}"><xp:this.facets><xp:pager partialRefresh="true" layout="Previous Group Next" xp:key="headerPager" id="pager1"></xp:pager></xp:this.facets><xp:viewColumn columnName="rol" id="viewColumn1"><xp:viewColumnHeader value="Rol" id="viewColumnHeader1"></xp:viewColumnHeader></xp:viewColumn><xp:viewColumn columnName="uniquePadre" id="viewColumn2"><xp:viewColumnHeader value="Unique padre" id="viewColumnHeader2"></xp:viewColumnHeader></xp:viewColumn></xp:viewPanel></xp:this.facets></xc:ccLayout>
+</xp:view>

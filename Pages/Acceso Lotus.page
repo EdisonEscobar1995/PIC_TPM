@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='366cee' unid='4DE463AD818E825905257B8A0065E879' sequence='57'>
+<created><datetime>20130614T133306,49-05</datetime></created>
+<modified><datetime>20260126T222214,94-05</datetime></modified>
+<revised><datetime>20260126T222214,93-05</datetime></revised>
+<lastaccessed><datetime>20260126T222214,93-05</datetime></lastaccessed>
+<addedtofile><datetime>20221117T010258,36-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador DEV/O=DEV</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador DEV/O=DEV</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Administrador DEV/O=DEV</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Administrador DEV/O=DEV</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>C34WQ</text></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABSZUcmVidWNoZXQgTVMAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><textlist><text>Acceso Lotus</text><text>pgLotus</text></textlist></item>
+<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>pgLotus</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAqBAoMEAQCF/wgA
+AQAACoECgwQBAIX/CAABAAAKgQKDBAEAhf8IAAEAAAqBAoMEAQCF/wgAAQAACoECgwQBAIX/CAAB
+AAAKgQKC/1oAAgAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAABAAAAAJSFAAAAAKAFCgAAAAAAAQAAAAQAAACDBAIA3QYBAPv/+/8sAAAAAAAB
+AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAABc/z4AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAABAAAKAAAAAAEAAAAAAN4GAQD7/6MOoAUoADwAAAAA
+AAIQpBIAALUJBD0AAAACAAABAQAAgQKC/1oAAwADAAAAAAAAALUJBD21CQAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYBAAAAAFSHAAAAAAAAAAAAAAAAAQAAAAQAAACD
+BAMAhf8IAAEAAAqBAoMEAwCF/wgAAQAACoECgwQDAIX/CAABAAAKgQKDBAMAhf8IAAEAAAqBAoL/
+WgAEAAMAAAAAAAAAtQkEPbUJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAhgEAAAAAVIUAAAAAAAAAAAAAAAABAAAABAAAAIMEBADdBgEA+//7/ywAAAAAAAECAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAFz/PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAOAAAAAAAAAAEAAAoAAAAAAQAAAAAA3gYBAPv/zw61CSgAPAAAAAAAAhDQEgAA
+7A7MGAAAAAIAAAEBAACBAoL/WgAFAAMAAAAAAAAA7A7MGOwOAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVIcAAAAAAAAAAAAAAAABAAAABAAAAIMEBQCF/wgA
+AQAACt0GAQCZAJkAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAB9ABwAAAACAJcAhgAAAAAAAAAA
+AAAAAAAAAAAA9v8tAAAAAAADABMACwAAAAAAAAAAAAAAAAAAAAAAAAAAAHdhcm5pbmcuanBnAN4G
+AQCZAIX/CAABAAAK0BIAAcwYzTcAAAACAAABAQAAgQKC/1oABgADAAAAAAAAAMwYzTfMGAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYBAAAAAFSHAAAAAAAAAAAAAAAA
+AQAAAAQAAACDBAYAhf8IAAUAABKBAoMEBgCF/2QABQAAEkVzdGEgYXBsaWNhY2mibiBlc3RhIGRp
+c2WkYWRhIHBhcmEgZnVuY2lvbmFyIGVuIHVuIGFtYmllbnRlIFdFQiB5IG5vIGRlc2RlIGVsIGNs
+aWVudGUgTm90ZXMugQKDBAYAhf8IAAUAABKBAoMEBgCF/0QABQAAElBvciBmYXZvciBjb211bqFx
+dWVzZSBjb24gZWwgYWRtaW5pc3RyYWRvciBkZSBsYSBhcGxpY2FjaaJuLoECgwQGAIX/CAAFAAAH
+gQKDBAYAhf8IAAUAAA7RBgAAAACBAoMEAwCF/wgABQAADqUGAAAAAIECgwQCAIX/CAABAAAK
+</rawitemdata></item></note>
+

@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='8da' unid='A005A1F79DE7282105257C360046EA0E' sequence='38'>
+<created><datetime>20131203T075434,38-05</datetime></created>
+<modified><datetime>20250605T010514,60-05</datetime></modified>
+<revised><datetime>20250604T101929,81-05</datetime></revised>
+<lastaccessed><datetime>20250605T010514,59-05</datetime></lastaccessed>
+<addedtofile><datetime>20161016T134732,24-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador DEV/O=DEV</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador DEV/O=DEV</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Administrador DEV/O=DEV</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Administrador DEV/O=DEV</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='OriginalModTime' sign='true'><datetime>20100916T112413,96-05</datetime></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABSZWZXJkYW5hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$SubForm_RepIDs' sign='true'><textlist><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text></textlist></item>
+<item name='edicion' summary='false' sign='true'><number>0</number></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>User / Utilidad</text><text>frUtilidad</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAIgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$HTMLBodyTag' sign='true'><formula>"style=margin:0px;padding:0px"</formula></item>
+<item name='$WEBQuerySave' sign='true'><formula>@Command([ToolsRunMacro]; "agGuardarUtilidad")</formula></item>
+<item name='$Flags'><text>C</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='Form' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='UNIQUEPADRE' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='SaveOptions' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='comentario' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='formPadre' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='autor' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='opinion' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>opinion</text><text>autor</text><text
+>formPadre</text><text>comentario</text><text>SaveOptions</text><text>uniquePadre</text><text
+>form</text></textlist></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>frUtilidad</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+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
+</rawitemdata></item></note>
+

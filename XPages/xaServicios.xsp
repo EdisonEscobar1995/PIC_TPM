@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" rendered="false"
+	viewState="nostate">
+
+	<xp:this.resources>
+		<xp:script src="/ssCommon" clientSide="false"></xp:script>
+	</xp:this.resources>
+
+	<xp:this.afterRenderResponse><![CDATA[#{javascript:var accion = param.get("accion");
+switch(accion){
+	case "postReporteTotal":
+	postReporteTotal();
+	break;
+	case "getReporteTotal":
+	getReporteTotal();
+	break;
+	case "postAbrirDocumentos":
+	postAbrirDocumentos();
+	break;
+	case "postReporteRegistroCapacitacion":
+	postReporteRegistroCapacitacion(); 
+	break;
+	case "generarExcelRegistroCapacitaciones":
+	generarExcelRegistroCapacitaciones();
+	break;
+	case "cargarDatosRegistroCapacitacion":
+		cargarDatosRegistroCapacitacion();
+	break;
+	case "cargarAcciones":
+		cargarAcciones();
+	break;
+	case "asociarAccion":
+		asociarAccion();
+	break;
+	case "guardarActividades":
+		guardarActividades();
+	break;
+	case "guardarMasivo":
+		guardarMasivo();
+	break;
+	case "getTipoCertificaciones":
+		getTipoCertificaciones();
+	break;
+	case "eliminarDocumentosSeleccionados":
+		eliminarDocumentosSeleccionados();
+	break;
+	case "cargarCertificacionesPendientes":
+		cargarCertificacionesPendientes();
+	break;
+	case "getEstadosPorForm":
+		getEstadosPorForm();
+	break;
+	default:
+	error();
+	break;
+}
+}]]></xp:this.afterRenderResponse>	
+
+</xp:view>

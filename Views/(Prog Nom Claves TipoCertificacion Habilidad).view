@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='30175a' unid='3806AC59D7960572052585770069C1C2' sequence='42'>
+<created><datetime>20200529T141508,82-05</datetime></created>
+<modified><datetime>20250605T010529,60-05</datetime></modified>
+<revised><datetime>20250604T101931,49-05</datetime></revised>
+<lastaccessed><datetime>20250605T010529,59-05</datetime></lastaccessed>
+<addedtofile><datetime>20200924T094358,96-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(Prog Nom Claves TipoCertificacion Habilidad)|vwProgNomClavesTipoCertificacionHabilidad</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+NAECAG4AAgAkMAUABABmb3JtAQApAGZyQ29uZmlndXJhY2lvbkNhcGl0dWxvc1JldmlzaW9uRGly
+ZWNjaW9uAAoCrwAqABgABQAOAG5vbWJyZUNhcGl0dWxvrgASAAUABgBub21icmWuAAQAtQMDAAUA
+RgBBAAYABAACAA0AEQAJAAQAZm9ybSQwY2VydGlmaWNhY2lvbnRpcG9DZXJ0aWZpY2FjaW9uJENv
+bmZsaWN0JFJFRgAEAAQAAABYAAUABgBub21icmUBAAAACwIFAAQAZm9ybQEACwBmckhhYmlsaWRh
+ZAAKAgUABABmb3JtAQATAGZyVGlwb0NlcnRpZmljYWNpb24ACgIdAgQAHAIDAAcAIgAbAAlMMVMy
+UzNTNFM1UzdTOFM5UzEwUzExUzEyUwA=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+RgAEAABEAGYAAAAEAABmAAQAAgAAZgAGAA0AAGYAEwARAGZvcm0kMGNlcnRpZmljYWNpb250aXBv
+Q2VydGlmaWNhY2lvbg==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAEAAEACAAAAFZDAQAEAAQAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMBAAIABgB+AAAAUAAB
+AAAKAAAAAAAAAAAAAgIAAABWQwEADQANAAAAAABXAAEAAAoAAAAAAAAAAAACAgAAAFZDAQARABIA
+AAAAAFgAAQAACgAAAAAAAAAAAAICAAAAZm9ybUZvcm0kME5vbWJyZX4AAgBuAAIAJDAFAAQAZm9y
+bQEAKQBmckNvbmZpZ3VyYWNpb25DYXBpdHVsb3NSZXZpc2lvbkRpcmVjY2lvbgAKAq8AKgAYAAUA
+DgBub21icmVDYXBpdHVsb64AEgAFAAYAbm9tYnJlrgAEALUDAwAHAA4ABwAJMlMzUzRTAGNlcnRp
+ZmljYWNpb25DZXJ0aWZpY2FjaW9udGlwb0NlcnRpZmljYWNpb25UaXBvIGNlcnRpZmljYWNpb24m
+AAEAAAABAQAJAQAACgEBAAoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/
+/wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAA
+AAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAAB
+AP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAA
+AAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$ViewScript' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:66
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Querypaste(Source As Notesuiview, Continue As Variant)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:Querypaste:1:12
+Sub Querypaste(Source As Notesuiview, Continue As Variant)
+	Continue = False
+End Sub
+'++LotusScript Development Environment:2:2:BindEvents:1:129
+Private Sub BindEvents ( Byval ObjectName_ As String )
+	Static Source As NOTESUIVIEW
+	Set Source = Bind(Objectname_)
+	On Event QUERYPASTE From Source Call QUERYPASTE
+End Sub<break/></text></item></note>
+

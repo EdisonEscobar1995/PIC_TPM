@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='132bee' unid='757C9318E26792CC052582FF0052502B' sequence='5'>
+<created><datetime>20180905T095904,75-05</datetime></created>
+<modified><datetime>20250604T101657,86-05</datetime></modified>
+<revised><datetime>20250604T101657,85-05</datetime></revised>
+<lastaccessed><datetime>20250604T101657,85-05</datetime></lastaccessed>
+<addedtofile><datetime>20180905T095904,79-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$FormatNote' summary='true'>
+<rawitemdata type='4'>
+AQAI5g2YGUQPRXEqTwBifSUF
+</rawitemdata></item>
+<item name='$TITLE' sign='true'><text>Untitled</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+LgAFACAAGwADAAQACQAEAHNlZGUkQ29uZmxpY3QkUkVGAAQABAAAAAgAZgADAA==
+</formula></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EQABAABECGYHAAAEAHNlZGU=
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAEACAAAAFZDAwAEACUAAAAAAFAABQAAB4ABAAAAAAAAAAICAAAAc2VkZVs8c3BhbiBjbGFz
+cz0nbGFiZWxTZWRlJz5TZWRlPC9zcGFuPl0mAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAA
+AAAAAAAAAFdDBgEABwAAAAAAAAAAAAAAAAAAAAAAAAgALAAAAP//AAAAAAAAAAAAAAAAAABCABAA
+AAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAAAQAA
+AAAAAAAsAAoABAAAABoAAQAFAHF1ZXJ5APsBNAEBAAAACwIDAAcADAAFAAk0UzVTAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Verdana</text><text>6</text><text>38</text><text>Verdana</text></textlist></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>P^Y</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$ViewInheritedFrom'><text>Sede</text></item></note>
+

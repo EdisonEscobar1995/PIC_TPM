@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='366dda' unid='FEB77C0170B3948E05257D62004FBECE' sequence='54'>
+<created><datetime>20140929T093101,90-05</datetime></created>
+<modified><datetime>20250605T010514,41-05</datetime></modified>
+<revised><datetime>20250604T101929,60-05</datetime></revised>
+<lastaccessed><datetime>20250605T010514,40-05</datetime></lastaccessed>
+<addedtofile><datetime>20221117T010259,56-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>Título</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+CgEIAFIABQAEAGZvcm0BABYAZnJSZWdpc3Ryb0NhcGFjaXRhY2lvbgoCrwAmABwABQAQAHRlbWFD
+YXBhY2l0YWNpb27CAa4ACgArAK4ABAC1AwMACABKAAUABABmb3JtAQAIAGZyQWNjaW9uCgKvACwA
+IgAFABEAYWNjaW9uRGVzY3JpcGNpb24AigCFAsIBrgAKACsArgAEALUDAwACAEIAAgAkMQUABABm
+b3JtAQAFAGZyUEVRAAoCrwAiABAABQAGAG5vbWJyZa4AEgAFAAYAdGl0dWxvrgAEALUDAwAFAB4A
+GQADAAIACQAEACQxJENvbmZsaWN0JFJFRgAEAAQAAAAIAGYAAwA=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABEAGYAAAACACQx
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAIACAAAAFZDAQACACkAEAEAAAgBBQAAB4AAAAAAAAAAAAICAAAAJDFbPHNwYW4gY2xhc3M9
+J2xhYmVsVGl0dWxvJz5UoXR1bG88L3NwYW4+XRABCABSAAUABABmb3JtAQAWAGZyUmVnaXN0cm9D
+YXBhY2l0YWNpb24KAq8AJgAcAAUAEAB0ZW1hQ2FwYWNpdGFjaW9uwgGuAAoAKwCuAAQAtQMDAAcA
+EAAKAAkzUzRTNlMxMVMIAEoABQAEAGZvcm0BAAgAZnJBY2Npb24KAq8ALAAiAAUAEQBhY2Npb25E
+ZXNjcmlwY2lvbgCKAIUCwgGuAAoAKwCuAAQAtQMDAAcAFgAPAAkwUjNTNFM2UzEyUzE2UwACAEIA
+AgAkMQUABABmb3JtAQAFAGZyUEVRAAoCrwAiABAABQAGAG5vbWJyZa4AEgAFAAYAdGl0dWxvrgAE
+ALUDAwAHAAoAAwAJMFIAJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAEAAAAAAAAAAABXQwYB
+AAcAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAD//wAAAAAAAAAAAAAAAAAAQgAQAAAAAQD///8ABQD/
+//8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAALAAKAAQA
+AAAaAAEABQBxdWVyeQD7ATQBAQAAAAsCAwAHAAwABQAJNFM1UwAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Verdana</text><text>6</text><text>38</text><text>Verdana</text></textlist></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>^Y</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item></note>
+

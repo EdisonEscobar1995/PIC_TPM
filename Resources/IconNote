@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='12.0'
+ maintenanceversion='2.0' replicaid='0525804E00673626'>
+<noteinfo noteid='126' unid='B1668518F43254FB05257B8A0048D76D' sequence='777'>
+<created><datetime>20130614T081537,41-05</datetime></created>
+<modified><datetime>20260110T203316,11-05</datetime></modified>
+<revised><datetime>20260110T203316,10-05</datetime></revised>
+<lastaccessed><datetime>20260110T203316,10-05</datetime></lastaccessed>
+<addedtofile><datetime>20161016T134727,52-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Aplica/O=CERT</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Aplica/O=CERT</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Aplica/O=CERT</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Aplica/O=CERT</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Aplica/O=CERT</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Aplica/O=CERT</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Aplica/O=CERT</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Aplica/O=CERT</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Aplica/O=CERT</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Aplica/O=CERT</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Aplica/O=CERT</name><name>CN=Administrador IBM/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Carlos Andres Garcia Tobon/OU=CO/OU=Servicios/O=NUTRESA</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador IBM/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=NCAPP023/O=NUTRESA</name><name
+>CN=NCAPP033/O=NUTRESA</name><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<item name='$DefaultWebLaunchPage'><text>pgPrincipal</text></item>
+<item name='$DefaultFrameset'><text>frmsLotus</text></item>
+<item name='IconBitmap' summary='true'>
+<rawitemdata type='6'>
+AiAgAQAA/////////////D////gf//z4Hz/+eB5//zgc//OcOc/5z/Of/OfnP/5zzn//OBz//5w5
+///Oc///5+f///PP//w5nD/4GZgf+BmYH/gZmB/4GZgf/DmcP//5n///+Z////mf///5n///+Z//
+//mf///9v/////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAC7uwAAAAAAAAAAAAAAAAALu7uwAAAAAAAAAAAAuwAAC7u7sAAAuwAAAAAAAAuwAAu7u7AAC7AA
+AAAAAAAAuwALu7uwALsAAAAAAACqAAuwALu7AAuwAIgAAAAACqAAuwAAAAC7AAiAAAAAAACqAAuw
+AAALsACIAAAAAAAACqAAuwAAuwAIgAAAAAAAAACqAAu7u7AAiAAAAAAAAAAACqAAu7sACIAAAAAA
+AAAAAACqAAuwAIgAAAAAAAAAAAAACqAAAAiAAAAAAAAAAAAAAACqAACIAAAAAAAAAAAAqqoACqAI
+gACIiAAAAAAACqrqoAqgCIAIiIiAAAAAAAqqqqAKoAiACIiIgAAAAAAKqqqgCqAIgAiIiIAAAAAA
+CqqqoAqgCIAIiIiAAAAAAACqqgAKoAiAAIiIAAAAAAAAAAAACqAIgAAAAAAAAAAAAAAAAAqgCIAA
+AAAAAAAAAAAAAAAKoAiAAAAAAAAAAAAAAAAACqAIgAAAAAAAAAAAAAAAAAqgCIAAAAAAAAAAAAAA
+AAAKoAiAAAAAAAAAAAAAAAAAAKAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$SoftDeleteExpireHours'><number>900</number></item>
+<item name='$FlagsNoRefresh'><text/></item>
+<item name='$TemplateServerName'><text>CN=NCAPP033/O=NUTRESA</text></item>
+<item name='$TemplateFileName'><text>F:\HCL\Domino\Data\Aplicaciones\Plantillas\Plantilla_TPM.ntf</text></item>
+<item name='$TemplateModTime'><datetime>20250829T122540,40-05</datetime></item>
+<item name='$PIRCRefreshModTime'><datetime>20250930T010155,59-05</datetime></item>
+<item name='$TITLE'><text>PIC CNCH Rionegro
+</text></item>
+<item name='$Daos'><text>0</text></item>
+<item name='$LargeSummary'><text>0</text></item>
+<item name='$Flags'><text>J7FZqN4Ez</text></item></note>
+

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='1406' unid='B9D1C3B5EAF67C5205257ED10049C4D4' sequence='42'>
+<created><datetime>20151001T082545,16-05</datetime></created>
+<modified><datetime>20250605T010513,47-05</datetime></modified>
+<revised><datetime>20250604T101928,63-05</datetime></revised>
+<lastaccessed><datetime>20250605T010513,46-05</datetime></lastaccessed>
+<addedtofile><datetime>20161018T114928,86-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Anderson Mena/O=desarrollo</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>Mes descendiente</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+CAEIAJgABQAEAGZvcm0BAAUAZnJIQU4ACgIFAAQAZm9ybQEABwBmckNBUERPAAoCHQIFAAQAZm9y
+bQEABQBmckxVUAAKAh0CrwBOACYABQAFAGZlY2hhAAUAEABmZWNoYUluc2NyaXBjaW9uCQKuACgA
+BQAFAGZlY2hhAAUAEABmZWNoYVB1YmxpY2FjaW9uCQKuAAQAtQMDAAIARAACACQwBQAFAGZlY2hh
+AFYBAQAAAAsCrwAkABIABQAFAGZlY2hhAE8BrgASAAAAAAAAAAAAAACuAAQAtQMEAAMABQAeABkA
+AwACAAkABAAkMCRDb25mbGljdCRSRUYABAAEAAAACABmAAMA
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABEAWYAAAACACQw
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQABAAEACAAAAFZDDQACABAAHgEAAFAABQAAB4AAAAAAAAAAAAICAAAAJDBNZXMgZGVzY2VuZGll
+bnRlHgEIAJgABQAEAGZvcm0BAAUAZnJIQU4ACgIFAAQAZm9ybQEABwBmckNBUERPAAoCHQIFAAQA
+Zm9ybQEABQBmckxVUAAKAh0CrwBOACYABQAFAGZlY2hhAAUAEABmZWNoYUluc2NyaXBjaW9uCQKu
+ACgABQAFAGZlY2hhAAUAEABmZWNoYVB1YmxpY2FjaW9uCQKuAAQAtQMDAAcANAAtAAkzUzRTNVM2
+UzdTOFM5UzEwUzExUzEyUzE0UjE1UzE2UzE4UjE5UzIwUzIxUgACAEQAAgAkMAUABQBmZWNoYQBW
+AQEAAAALAq8AJAASAAUABQBmZWNoYQBPAa4AEgAAAAAAAAAAAAAArgAEALUDBAADAAcADAAFAAkw
+UjdTACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEAAQABAAAAAAAAAAAAV0MGAQAHAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAEAAAAAEA////AAUA////AAEAAAAAAAAA
+AAAAAAAAAQD///8AAQD///8AAAABAAAAAAABAAAAAAABAAAAAAAAAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
+>Verdana</text><text>6</text><text>38</text><text>Verdana</text></textlist></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>^Y</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item></note>
+

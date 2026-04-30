@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='392b36' unid='BBD044C54EC1748C052583A1007A2533' sequence='29'>
+<created><datetime>20190214T171409,15-05</datetime></created>
+<modified><datetime>20250605T010515,77-05</datetime></modified>
+<revised><datetime>20250604T101931,03-05</datetime></revised>
+<lastaccessed><datetime>20260421T091138,98-05</datetime></lastaccessed>
+<addedtofile><datetime>20231206T010157,58-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>(Prog Actividades)|vwProgActividades</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+ZAAFADAALAAEAAsACAAJAAQAdW5pcXVlUGFkcmVwb3NpY2lvbiRDb25mbGljdCRSRUYEAAQAAAAg
+AAUABABGb3JtAQALAGZyQWN0aXZpZGFkAAoCAwAHAA4ACAAJTDFTMlMzUw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+JwACAABEAGYAAAALAABmAAsACAB1bmlxdWVQYWRyZXBvc2ljaW9u
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAAIACAAAAFZDAQALAAwAAAAAAJ8AAQAACgAAAAAAAAAAAAICAAAAVkMBAAgACAAAAAAAnwAB
+AAAKAAAAAAgAAAAAAgIAAAB1bmlxdWVQYWRyZVVuaXF1ZSBwYWRyZXBvc2ljaW9uUG9zaWNpb24m
+AAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAD/
+/wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABAP//
+/wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQBZQwAACAAAAAEAAAABAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAALiwkAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item></note>
+

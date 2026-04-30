@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><note xmlns="http://www.lotus.com/dxl" class="filter" maintenanceversion="2.0" replicaid="0525804E00673626" version="12.0">
+<noteinfo noteid="3fa326" sequence="2" unid="D7CF5D90124BF65105258D8F001C23DA">
+<created><datetime>20260130T000721,86-05</datetime></created>
+<modified><datetime>20260130T000739,97-05</datetime></modified>
+<revised><datetime>20260130T000739,96-05</datetime></revised>
+<lastaccessed><datetime>20260130T000739,96-05</datetime></lastaccessed>
+<addedtofile><datetime>20260130T000721,89-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$POID"><datetime>20250604T101928,15-05</datetime></item>
+<item name="$TITLE" sign="true"><text>JSFrClasificacionBeneficio</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item></note>

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
+ replicaid='0525804E00673626'>
+<noteinfo noteid='586' unid='656A1A0B7AB06C5405257BF9006F1D9C' sequence='35'>
+<created><datetime>20131003T151340,76-05</datetime></created>
+<modified><datetime>20260126T222243,55-05</datetime></modified>
+<revised><datetime>20260126T222243,54-05</datetime></revised>
+<lastaccessed><datetime>20260126T222243,54-05</datetime></lastaccessed>
+<addedtofile><datetime>20161016T134730,27-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador DEV/O=DEV</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador DEV/O=DEV</name><name
+>CN=Administrador Aplicaciones/O=GNCH</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Administrador DEV/O=DEV</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Administrador DEV/O=DEV</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin Desarrollo/O=cognox</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Admin Desarrollo/O=cognox</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Anderson Mena/O=desarrollo</name><name>CN=Administrador Aplicaciones/O=GNCH</name><name
+>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
+<wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
+<item name='OriginalModTime' sign='true'><datetime>20110504T115751,05-05</datetime></item>
+<item name='$Fields'><text>form</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>Admon / CKUpload</text><text>frCKUpload</text></textlist></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CD</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$ConflictAction'><text>2</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>frCKUpload</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAArf+t/wwA
+GAAIAAAAAAB6/ywAAAAAAAAAAAASAAAAAAAAAAAAAAAAAG9uQ2xpY2s9ImFsZXJ0KDEpIq4C3gYA
+AK4Ahf8IAAEAAAqBAoMEAQDM/wgAAAAAAIX/CAABAAAKzf8IAAAAAACBAoL/WgACAAAAAAAAAAAA
+oAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEAAAAAlYcA
+AAAAAAAAAAAAAAABAAAABgAAAIMEAgCF/wgAAQAACt0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAiv+GAYABAAUAAAAAAAAAAAAAAQACCloBAAAAAAAACAAAAAAAWgEKAAQAAQAeAAgAX2ZpbG5h
+dm5zAAAAAAAAAAAA8D9rAgMABwAQAAkACTFTMlM1UzZTAAEAEgAFAF91bmlkAJAAVgEDAAcAEgAL
+AAkwUjFTMlM0UzVTAAEAKAAIAF9mdW5jTnVtAQAPAENLRWRpdG9yRnVuY051bQD7ATQBAwAHAA4A
+BwAJMFIxUzJTAAAAogABADMAPHNjcmlwdD4Ad2luZG93LnBhcmVudC5DS0VESVRPUi50b29scy5j
+YWxsRnVuY3Rpb24oAAUACABfZnVuY051bSICAQAEACwgJy8iAvsAMAEiAgEAAwAvMC8AIgIFAAUA
+X3VuaWQAIgIBAAcALyRmaWxlLwAiAgUACABfZmlsbmF2biICAQAOACcpOwA8L3NjcmlwdD4AIgID
+AAcAKgAjAAkwUlI1UzZTN1M4UzlTMTBTMTFTMTJTMTNTMTRTMTVTMTZTACQkUmV0dXJuYg4BAIQA
+AAAAAAAAAADeBgAAiv/dBgAAhf+F/wgAAQACCtIIAQD/AAAA3gYAAIX/
+</rawitemdata></item></note>
+
