@@ -61,6 +61,22 @@ $(function(){
 		$("#general").show();
 		break;
 	}
+	
+	var umbralScrollTop = 320;
+	var $btnScrollTop = $("#btnScrollTop");
+	if ($btnScrollTop.length) {
+		function syncBtnScrollTop(){
+			if ($(window).scrollTop() > umbralScrollTop) $btnScrollTop.addClass("is-visible");
+			else $btnScrollTop.removeClass("is-visible");
+		}
+		$(window).on("scroll", syncBtnScrollTop);
+		syncBtnScrollTop();
+		$btnScrollTop.on("click", function(e){
+			e.preventDefault();
+			$("html, body").animate({scrollTop: 0}, 400);
+		});
+	}
+	
 });
 
 function addOnChange(selector){

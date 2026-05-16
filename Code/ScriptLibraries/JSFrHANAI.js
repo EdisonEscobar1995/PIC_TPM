@@ -36,35 +36,43 @@ $(function(){
 	
 	$(".time").on("click", function(){
 		$('#timepicker1').click();
-	})
+	});
+	
+	if (application.bEdicion && $("[name='perteneceCicloMejora']").val() == "Si") {
+		$(".rowCualCicloMejora").parent().show();
+	} else {
+		$(".rowCualCicloMejora").parent().hide();
+	}
 	
 	$("[name='perteneceCicloMejora']").on("change", function(){
-		$("#dCualCicloMejora table").show();
-		$("#dCualCicloMejora table tr").show();
+		/* $("#dCualCicloMejora table").show();
+		$("#dCualCicloMejora table tr").show(); */
 		if ($(this).val() == "Si"){
-			$("#dCualCicloMejora").show();
+			$(".rowCualCicloMejora").parent().show();
 		}else{
-			$("#dCualCicloMejora").hide();
+			$(".rowCualCicloMejora").parent().hide();
 		}
-	})
+	});
 		
 	$("[name='identificaNuevosRiesgos']").on("change", function(){
-		$("#dNuevosRiesgos table").show();
-		$("#dNuevosRiesgos table tr").show();
+		// $("#dNuevosRiesgos table").show();
+		// $("#dNuevosRiesgos table tr").show();
 		if ($(this).val() == "Si"){
-			$("#dNuevosRiesgos").show();
+			$(".rowCualesRiesgos").parent().show();
 		}else{
-			$("#dNuevosRiesgos").hide();
+			$(".rowCualesRiesgos").parent().hide();
 		}
-	})
+	});
 	
 	$("[name='fieldReplicaInfoComple']").on("change", function(){
 		if ($(this).val() == "Si"){
-			$("#dDondeReplicaInfoComple").show();
+			// $("#dDondeReplicaInfoComple").show();
+			$(".rowDondeReplica").parent().show();
 		}else{
-			$("#dDondeReplicaInfoComple").hide();
+			// $("#dDondeReplicaInfoComple").hide();
+			$(".rowDondeReplica").parent().hide();
 		}
-	})
+	});
 	
 	$("[name='tipo']").on("change", function(){
 		var tipo = $(this).val();
@@ -158,13 +166,213 @@ function goToStep(step) {
 }
 
 function mostrarCampos(tipo, callback) {
+
+    if (application.bEdicion) {
+        tipo = (tipo ? tipo : $("[name='tipo']").val());
+    } else {
+        tipo = documento.sTipoHerramienta;
+    }
+
+    var url = application.sWebDbName +
+        "agMostrarCamposAI?Open&edit=" + (application.bEdicion ? "1" : "0") +
+        "&unique=" + application.sUnique +
+        "&form=" + application.sForm +
+        "&tipoHerramienta=" + tipo;
+    
+    // 🔹 Mapa de tablas
+    var TABLE_MAP = {
+        ordenInv: ".tableInv",
+        ordenImpl: ".tableImp",
+        ordenAna: ".tableAna",
+        ordenInfCom: ".tableInfCom"
+    };
+
+    // 🔹 Mapa de secciones ANA
+    var ANA_SECTIONS = {
+        diagramacausaefecto: ".ddiagramacausaefecto",
+        porque: ".dporque",
+        capdo: ".dcapdo",
+        actividades: ".dactividades",
+        acciones: ".dacciones",
+        "5w1h": ".d5w1h"
+    };
+
+    $.getJSON(url, function (data) {
+
+        if (data.msgError != "") {
+            location.href = application.sWebDbName + "frError?Open&msg=" + data.msgError;
+            return;
+        }
+
+        documento.aCampos = [];
+        documento.aTipos = [];
+        documento.aCamposSeccionesRequeridas = [];
+        documento.aTiposSeccionesRequeridas = [];
+
+        if (!data.fields || data.fields.length === 0) {
+            $(".camposTable table, .camposEncabezado table").hide();
+            $(".camposTable tr, .camposEncabezado tr").hide();
+            return;
+        }
+
+        // 🔹 Procesar campos
+        $.each(data.fields, function (_, val) {
+
+            var campoLower = val.campo.toLowerCase();
+            
+            if (campoLower == "beneficiotangiblereal" || campoLower == "beneficiointangiblereal") {
+            	$(".seccionImpl").show();
+            }
+            
+            if (campoLower == "contenidoinfocomple"){
+				$(".contenidoInfoComple").show();
+				$(".contenidoInfoComple table, .contenidoInfoComple table tr").show();
+				if (val.requerido == "Si") {
+					documento.aCampos.push("Body");
+				}												
+			}
+
+            /* =====================================================
+               🔹 SECCIONES ANA (NO TABLAS)
+            ===================================================== */
+            if (ANA_SECTIONS[campoLower]) {
+            	// $(".seccionAna").show();
+                var $section = $(ANA_SECTIONS[campoLower]);
+
+                if ($section.length > 0) {
+
+                    if (val.Show && val.Show[0] === "Si") {
+                        $section.show();
+                    } else {
+                        $section.hide();
+                    }
+
+                    if (val.ordenAna && val.ordenAna !== "") {
+                        $section.attr("data-order", parseInt(val.ordenAna, 10));
+                    }
+                }
+
+                return; // ⛔ No seguir con lógica de tablas
+            }
+
+            /* =====================================================
+               🔹 CAMPOS EN TABLAS
+            ===================================================== */
+            var $tr = $(":input").filter(function () {
+                return this.name && this.name.toLowerCase() === campoLower;
+            }).parents("tr");
+
+            if ($tr.length === 0) return;
+
+            var tableSelector = "";
+            var orderValue = null;
+
+            $.each(TABLE_MAP, function (ordenProp, selector) {
+                if (val[ordenProp] && val[ordenProp] !== "") {
+                    tableSelector = selector;
+                    orderValue = parseInt(val[ordenProp], 10);
+                    return false; // break
+                }
+            });
+
+            if (!tableSelector) return;
+
+            var $table = $(tableSelector).find("table");
+            if ($table.length > 0) {
+                $table.append($tr);
+            }
+
+            $tr.attr("data-order", orderValue || 9999);
+            $tr.show();
+            $table.show();
+
+            if (val.requerido === "Si") {
+                var name = $(":input", $tr).attr("name");
+                if (name) {
+                    documento.aCampos.push(name);
+                    documento.aTipos.push($(":input", $tr).attr("multiple") ? "multi" : "text");
+                }
+            }
+            
+        });
+
+        /* =====================================================
+           🔹 ORDENAR TABLAS
+        ===================================================== */
+        $("tr:not([data-order])").attr("data-order", 9999);
+
+        $.each(TABLE_MAP, function (_, selector) {
+
+            var $table = $(selector).find("table");
+            if ($table.length === 0) return;
+
+            var rows = $table.find("tr[data-order]").get();
+
+            rows.sort(function (a, b) {
+                return (
+                    parseInt($(a).attr("data-order"), 10) -
+                    parseInt($(b).attr("data-order"), 10)
+                );
+            });
+
+            $.each(rows, function (_, row) {
+                $table.append(row);
+            });
+        });
+
+        /* =====================================================
+           🔹 ORDENAR SECCIONES ANA
+        ===================================================== */
+        $(".seccionAna > div:not([data-order])").attr("data-order", 9999);
+
+        var anaSections = $(".seccionAna > div[data-order]").get();
+
+        anaSections.sort(function (a, b) {
+            return (
+                parseInt($(a).attr("data-order"), 10) -
+                parseInt($(b).attr("data-order"), 10)
+            );
+        });
+
+        $.each(anaSections, function (_, section) {
+            $(".seccionAna").append(section);
+        });
+
+        if (callback) callback();
+        
+        if ($("[name='perteneceCicloMejora']").val() == "Si") {
+    		$(".rowCualCicloMejora").parent().show();
+    	} else {
+    		$(".rowCualCicloMejora").parent().hide();
+    	}
+        
+        if ($("[name='identificaNuevosRiesgos']").val() == "Si") {
+    		$(".rowCualesRiesgos").parent().show();
+    	} else {
+    		$(".rowCualesRiesgos").parent().hide();
+    	}
+        
+        if (documento.sFieldReplicaInfoComple == "Si") {
+    		$(".rowDondeReplica").parent().show();
+    	} else {
+    		$(".rowDondeReplica").parent().hide();
+    	}
+
+        $("#general").show();
+
+    }).error(function () {
+        location.href = application.sWebDbName + "frError?Open&msg=3";
+    });
+}
+
+function mostrarCamposOld(tipo, callback) {
 	if(application.bEdicion){
 		tipo = (tipo ? tipo : $("[name='tipo']").val());		
 	}else{
 		tipo = documento.sTipoHerramienta;
 	}
 	
-	var url = application.sWebDbName + "agMostrarCamposBI?Open&edit=" + (application.bEdicion ? "1" : "0") + "&unique=" + application.sUnique + "&form=" + application.sForm + "&tipoHerramienta=" + tipo;
+	var url = application.sWebDbName + "agMostrarCamposAI?Open&edit=" + (application.bEdicion ? "1" : "0") + "&unique=" + application.sUnique + "&form=" + application.sForm + "&tipoHerramienta=" + tipo;
 	$.getJSON(url, function(data){
 		if (data.msgError == ""){
 			var tr = "";
@@ -283,7 +491,7 @@ function mostrarCampos(tipo, callback) {
 }
 
 function cargarDatos(callback, tipo){
-	var url = application.sWebDbName + "agCargarFormHANBI?Open"
+	var url = application.sWebDbName + "agCargarFormHANAI?Open"
 									 + "&edit=" + (application.bEdicion ? "1" : "0") 
 									 + "&unique=" + application.sUnique 
 									 + "&form=" + application.sForm 

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='view' xmlns='http://www.lotus.com/dxl' version='12.0' maintenanceversion='2.0'
  replicaid='0525804E00673626'>
-<noteinfo noteid='3fa322' unid='E0987E3C4DA6233E05258D8F001756EB' sequence='4'>
-<created><datetime>20260129T231455,79-05</datetime></created>
-<modified><datetime>20260129T231630,97-05</datetime></modified>
-<revised><datetime>20260129T231630,96-05</datetime></revised>
-<lastaccessed><datetime>20260430T012631,09-05</datetime></lastaccessed>
-<addedtofile><datetime>20260129T231455,80-05</datetime></addedtofile></noteinfo>
+<noteinfo noteid='404632' unid='3AC929E1F5E2B3DF05258DE900236B8B' sequence='4'>
+<created><datetime>20260430T012652,91-05</datetime></created>
+<modified><datetime>20260430T012906,86-05</datetime></modified>
+<revised><datetime>20260430T012906,85-05</datetime></revised>
+<lastaccessed><datetime>20260430T012906,85-05</datetime></lastaccessed>
+<addedtofile><datetime>20260430T012652,96-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></updatedby>
 <wassignedby><name>CN=Admin AplicaHCL/O=NUTRESA</name></wassignedby>
 <item name='$FormatNote' summary='true' sign='true'>
@@ -14,23 +14,25 @@
 AQD2eeaF9Ynx06K9CABRdiUF
 </rawitemdata></item>
 <item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>Admon / Clasificación beneficios|vwClasificacionBeneficios</text></item>
+<item name='$TITLE' sign='true'><text>(Prog Clasificación beneficios)|vwProgClasificacionBeneficios</text></item>
 <item name='$Index' sign='true'><text/></item>
 <item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-oAAFACIAHQADAAYACQAEAG5vbWJyZSRDb25mbGljdCRSRUYABAAEAAAAZAAFAAQARm9ybQEAIABB
-ZG1vbiAvIENsYXNpZmljYWNpom4gYmVuZWZpY2lvcwoCBAAFAAQARm9ybQEAGgBmckNsYXNpZmlj
-YWNpb25CZW5lbmVmaWNpbwoCBAAdAgQAAwAHABQADgAJM1M0UzZTN1M5UzEwUw==
+xAACACgAAgAkNwUABgBub21icmUBAAEAfAAiAgUABgB1bmlxdWUiAgMABQAeABkAAwACAAkABAAk
+NyRDb25mbGljdCRSRUYABAAEAAAAZAAFAAQARm9ybQEAIABBZG1vbiAvIENsYXNpZmljYWNpom4g
+YmVuZWZpY2lvcwoCBAAFAAQARm9ybQEAGgBmckNsYXNpZmljYWNpb25CZW5lbmVmaWNpbwoCBAAd
+AgQAAwAHABQADgAJM1M0UzZTN1M5UzEwUw==
 </formula></item>
 <item name='$Collation' summary='true'>
 <rawitemdata type='2'>
-EwABAABEAGYAAAAGAG5vbWJyZQ==
+DwABAABEAGYAAAACACQ3
 </rawitemdata></item>
 <item name='$ViewFormat' summary='true' sign='true'>
 <rawitemdata type='5'>
-AQABAAcACQAAAFZDAQAGAAYAAAAAALQABQAAB4AAAAAAAAAAAAICAAAAbm9tYnJlTm9tYnJlJgAB
-AAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAEAAAAAAAAAAABXQwYBAAcAAAAAAAAAAAAAAAAAAAAA
-AQAAAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAQAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAAB
-AP///wABAP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQA=
+AQABAAcACQAAAFZDAQACAA8AOgAAALQABQAAB4AAAAAAAAAAAAICAAAAJDdOb21icmUgfCB1bmlx
+dWU6AAIAKAACACQ3BQAGAG5vbWJyZQEAAQB8ACICBQAGAHVuaXF1ZSICAwAHABAACQAJMVMyUzNT
+NFMAJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQABAAEAAAAAAAAAAABXQwYBAAcAAAAAAAAAAAAA
+AAAAAAAAAQAAAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAQAAAAAQD///8ABQD///8AAQAAAAAAAAAA
+AAAAAAABAP///wABAP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQA=
 </rawitemdata></item>
 <item name='$Fonts' sign='true'><textlist><text>5</text><text>38</text><text
 >Verdana</text><text>6</text><text>38</text><text>Verdana</text></textlist></item>

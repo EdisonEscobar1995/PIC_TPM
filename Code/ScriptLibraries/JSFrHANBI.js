@@ -36,7 +36,7 @@ $(function(){
 	
 	$(".time").on("click", function(){
 		$('#timepicker1').click();
-	})
+	});
 	
 	if (application.bEdicion && $("[name='perteneceCicloMejora']").val() == "Si") {
 		$(".rowCualCicloMejora").parent().show();
@@ -52,7 +52,7 @@ $(function(){
 		}else{
 			$(".rowCualCicloMejora").parent().hide();
 		}
-	})
+	});
 		
 	$("[name='identificaNuevosRiesgos']").on("change", function(){
 		// $("#dNuevosRiesgos table").show();
@@ -62,7 +62,7 @@ $(function(){
 		}else{
 			$(".rowCualesRiesgos").parent().hide();
 		}
-	})
+	});
 	
 	$("[name='fieldReplicaInfoComple']").on("change", function(){
 		if ($(this).val() == "Si"){
@@ -72,7 +72,7 @@ $(function(){
 			// $("#dDondeReplicaInfoComple").hide();
 			$(".rowDondeReplica").parent().hide();
 		}
-	})
+	});
 	
 	$("[name='tipo']").on("change", function(){
 		var tipo = $(this).val();
@@ -366,8 +366,6 @@ function mostrarCampos(tipo, callback) {
         location.href = application.sWebDbName + "frError?Open&msg=3";
     });
 }
-
-
 
 function mostrarCamposOld(tipo, callback) {
 	if(application.bEdicion){

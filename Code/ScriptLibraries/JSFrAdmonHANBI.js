@@ -1,6 +1,9 @@
 $(function(){
 	$('.order').hide();
 	$("table select").removeClass("input-small").addClass("input-xsmall");
+	$(document).on("input", ".porcentage", function () {
+	  this.value = this.value.replace(/[^0-9]/g, "");
+	});
 	
 	if (application.bNuevo) {
 		$('.order').closest('td').hide();
@@ -28,7 +31,7 @@ $(function(){
 		addOrderFields(".dAnalisis .order");
 		addOrderFields(".dImplementacion .order");
 		addOrderFields(".dInfoComple .order");
-		orderFields(".dInvestigacion table");
+		orderFields(".dInvestigacion table:nth-of-type(2)");
 		ordenarTablasAna();
 		orderFields(".dInfoComple table");
 	}

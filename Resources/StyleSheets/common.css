@@ -355,11 +355,12 @@ td[class|="col"] > div {
 	display: flex;
     list-style: none;
     margin: 20px 0;
-    padding: 0;
-    /* position: sticky;
-    top: 186px;
+    /* margin: 0;
+    padding: 20px 0;
+    position: sticky;
+    top: 168px;
     z-index: 100;
-    background: white; */
+    background: white; */ 
 }
 
 /* Step base */
@@ -473,4 +474,47 @@ td[class|="col"] > div {
     display: block;
 }
 /* Fin Estilos HANBI*/
+
+/* Botón fijo “volver arriba” (esquina inferior derecha; visible tras scroll) */
+.btn-scroll-top {
+	position: fixed;
+	bottom: 24px;
+	right: 24px;
+	z-index: 1030;
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	line-height: 42px;
+	text-align: center;
+	border-radius: 50%;
+	background: #000;
+	color: #fff;
+	border: 2px solid #fff;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translateY(12px);
+	transform: translateY(12px);
+	-webkit-transition: opacity 0.25s ease, visibility 0.25s ease, -webkit-transform 0.25s ease;
+	transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+}
+
+.btn-scroll-top:hover,
+.btn-scroll-top:focus {
+	background: #333;
+	color: #fff;
+	text-decoration: none;
+	outline: none;
+}
+
+.btn-scroll-top.is-visible {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.btn-scroll-top i {
+	vertical-align: middle;
+}
 
